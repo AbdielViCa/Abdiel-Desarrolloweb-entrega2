@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lugares</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="icon" href="./img/logo2.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="container">
+            <header class="row">
+                <nav class="navbar navbar-dark bg-dark fixed-top">
+                    <div class="container-fluid">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <a href="./Index.html"><img class="logoImg" src="./img/logo.png" alt="Logo"></a>
+                        <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                            aria-labelledby="offcanvasDarkNavbarLabel">
+                            <div class="offcanvas-header">
+                                <a href="./Index.html"><img class="logoImg" src="./img/logo.png" alt="Logo"></a>
+                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                    <li class="nav-item">
+                                        <a class="nav-link" aria-current="page" href="./Index.html">Inicio</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="./lugares.html">Lugares</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" aria-current="page" href="./historia.html">Historia</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" aria-current="page" href="./libro-del-visitante.html">Libro
+                                            del
+                                            Visitante</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" aria-current="page" href="./nosotros.html">Nosotros</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div
+                        class="col-auto bg-dark text-light sidebar-container vh-100 d-flex flex-column full-height-sidebar">
+                        <div class="sidebar d-flex flex-column flex-grow-1 overflow-auto">
+                            <button id="prev-place-btn" class="prev-place-btn">︿</button>
+                            <div class="sidebar-content d-flex flex-column align-items-center">
+                                <div class="sidebar-item">
+                                    <a class="link-lugar" href="#" data-lugar="morro">
+                                        <div class="bubble-div"><img src="./img/places/morro.jpg"
+                                                alt="Avatar morro de Arica"></div>
+                                        <p>Morro de Arica</p>
+                                    </a>
+                                </div>
+                                <div class="sidebar-item">
+                                    <a class="link-lugar" href="#" data-lugar="azapa">
+                                        <div class="bubble-div"><img src="./img/places/azapa.jpg" alt="Avatar azapa">
+                                        </div>
+                                        <p>Azapa</p>
+                                    </a>
+                                </div>
+                                <div class="sidebar-item">
+                                    <a class="link-lugar" href="#" data-lugar="catedral">
+                                        <div class="bubble-div"><img src="./img/places/catedral.jpg"
+                                                alt="Avatar catedral">
+                                        </div>
+                                        <p>Catedral San Marcos</p>
+                                    </a>
+                                </div>
+                                <div class="sidebar-item">
+                                    <a class="link-lugar" href="#" data-lugar="cuevas">
+                                        <div class="bubble-div"><img src="./img/places/cuevas.jpg" alt="Avatar cuevas">
+                                        </div>
+                                        <p>Cuevas de Anzota</p>
+                                    </a>
+                                </div>
+                                <div class="sidebar-item">
+                                    <a class="link-lugar" href="#" data-lugar="museoazapa">
+                                        <div class="bubble-div"><img src="./img/places/museo.png"
+                                                alt="Avatar museo azapa">
+                                        </div>
+                                        <p>Museo Azapa</p>
+                                    </a>
+                                </div>
+                                <div class="sidebar-item">
+                                    <a class="link-lugar" href="#" data-lugar="lisera">
+                                        <div class="bubble-div"><img src="./img/places/lisera.jpg" alt="Avatar lisera">
+                                        </div>
+                                        <p>Playa la Lisera</p>
+                                    </a>
+                                </div>
+                                <div class="sidebar-item">
+                                    <a class="link-lugar" href="#" data-lugar="chungara">
+                                        <div class="bubble-div"><img src="./img/places/chungara.jpg"
+                                                alt="avatar chungará">
+                                        </div>
+                                        <p>Lago Chungará</p>
+                                    </a>
+                                </div>
+                                <div class="sidebar-item">
+                                    <a class="link-lugar" href="#" data-lugar="exaduana">
+                                        <div class="bubble-div"><img src="./img/places/exaduana.jpg"
+                                                alt="Avatar casa de la cultura">
+                                        </div>
+                                        <p>Casa de la Cultura</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <button id="next-place-btn" class="next-place-btn">﹀</button>
+                    </div>
+
+                    <div id="barraLugHorizontal" class="row">
+                        <div id="colLugHorizontal" class="col-12">
+                            <div class="horizontal-container">
+                                <button id="prevHbutton" class="prev-place-btn">❬</button>
+                                <div class="horizontal-sidebar-container d-flex overflow-auto">
+                                    <div class="horizontal-sidebar-item">
+                                        <a class="link-lugar" href="#" data-lugar="morro">
+                                            <div class="bubble-div"><img src="./img/places/morro.jpg"
+                                                    alt="Avatar morro de Arica"></div>
+                                            <p>Morro de Arica</p>
+                                        </a>
+                                    </div>
+                                    <div class="horizontal-sidebar-item">
+                                        <a class="link-lugar" href="#" data-lugar="azapa">
+                                            <div class="bubble-div"><img src="./img/places/azapa.jpg"
+                                                    alt="Avatar azapa">
+                                            </div>
+                                            <p>Azapa</p>
+                                        </a>
+                                    </div>
+                                    <div class="horizontal-sidebar-item">
+                                        <a class="link-lugar" href="#" data-lugar="catedral">
+                                            <div class="bubble-div"><img src="./img/places/catedral.jpg"
+                                                    alt="Avatar catedral">
+                                            </div>
+                                            <p>Catedral San Marcos</p>
+                                        </a>
+                                    </div>
+                                    <div class="horizontal-sidebar-item">
+                                        <a class="link-lugar" href="#" data-lugar="cuevas">
+                                            <div class="bubble-div"><img src="./img/places/cuevas.jpg"
+                                                    alt="Avatar cuevas">
+                                            </div>
+                                            <p>Cuevas de Anzota</p>
+                                        </a>
+                                    </div>
+                                    <div class="horizontal-sidebar-item">
+                                        <a class="link-lugar" href="#" data-lugar="museoazapa">
+                                            <div class="bubble-div"><img src="./img/places/museo.png"
+                                                    alt="Avatar museo azapa">
+                                            </div>
+                                            <p>Museo Azapa</p>
+                                        </a>
+                                    </div>
+                                    <div class="horizontal-sidebar-item">
+                                        <a class="link-lugar" href="#" data-lugar="lisera">
+                                            <div class="bubble-div"><img src="./img/places/lisera.jpg"
+                                                    alt="Avatar lisera">
+                                            </div>
+                                            <p>Playa la Lisera</p>
+                                        </a>
+                                    </div>
+                                    <div class="horizontal-sidebar-item">
+                                        <a class="link-lugar" href="#" data-lugar="chungara">
+                                            <div class="bubble-div"><img src="./img/places/chungara.jpg"
+                                                    alt="avatar chungará">
+                                            </div>
+                                            <p>Lago Chungará</p>
+                                        </a>
+                                    </div>
+                                    <div class="horizontal-sidebar-item">
+                                        <a class="link-lugar" href="#" data-lugar="exaduana">
+                                            <div class="bubble-div"><img src="./img/places/exaduana.jpg"
+                                                    alt="Avatar casa de la cultura">
+                                            </div>
+                                            <p>Casa de la Cultura</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <button id="nextHbutton" class="next-place-btn">❭</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col offset-auto">
+                        <div id="contenido-1">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="text-container">
+                                        <div class="image-container">
+                                            <img src="./img/places/morro.jpg" alt="Imagen de lugar" class="img-fluid">
+                                        </div>
+                                        <p>El Morro de Arica es un imponente promontorio rocoso que se eleva a 110
+                                            metros
+                                            sobre el nivel del mar, situado en la ciudad de Arica, en el norte de Chile.
+                                            Este sitio histórico y natural ofrece una vista panorámica impresionante de
+                                            la ciudad, el océano Pacífico y los alrededores, convirtiéndolo en un lugar
+                                            popular tanto para los turistas como para los locales. El Morro de Arica es
+                                            también un símbolo de la victoria chilena en la Guerra del Pacífico, con un
+                                            museo en la cima que conmemora la batalla librada en 1880, donde las fuerzas
+                                            chilenas tomaron el control del promontorio. Este lugar no solo ofrece un
+                                            viaje al pasado con su valor histórico, sino también un espacio para
+                                            disfrutar de la naturaleza y la tranquilidad del mar.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="details">
+                                        <h3>DATOS A CONSIDERAR:</h3>
+                                        <ul>
+                                            <li><b>Calzado Adecuado:</b> Usa zapatos cómodos y adecuados para caminar,
+                                                especialmente si decides subir a pie.</li>
+                                            <li><b>Hidratación y Protección Solar:</b> Lleva agua suficiente y usa
+                                                protector
+                                                solar, gorra y gafas de sol, ya que el sol puede ser muy fuerte.</li>
+                                            <li><b>Horario de Visita:</b> Considera visitar temprano en la mañana o al
+                                                final
+                                                de la tarde para evitar el calor intenso y disfrutar de la vista del
+                                                amanecer o
+                                                atardecer.</li>
+                                            <li><b>Museo y Monumentos:</b> Tómate el tiempo para explorar el museo y
+                                                leer
+                                                las placas conmemorativas para una experiencia enriquecedora.</li>
+                                            <li><b>Seguridad:</b> Mantente en los senderos marcados y sigue las
+                                                indicaciones
+                                                de seguridad, especialmente en las áreas más elevadas.</li>
+                                            <li><b>Cámara Fotográfica:</b> No olvides llevar una cámara para capturar
+                                                las
+                                                vistas panorámicas y momentos memorables.</li>
+                                            <li><b>Respeto por el Lugar:</b> Respeta los monumentos y el entorno
+                                                natural,
+                                                manteniendo el lugar limpio y siguiendo las normas locales.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="location">
+                                        <h3>UBICACIÓN</h3>
+                                        <p><b>A Pie:</b> Desde el centro de Arica, dirígete hacia el sur desde la Plaza
+                                            Colón, caminando por la calle Bolognesi en dirección al puerto. Sigue las
+                                            señales hacia el Morro de Arica, cruzando por la avenida Comandante San
+                                            Martín. Al llegar a la base del morro, encontrarás un sendero que lleva
+                                            hasta la cima. La caminata puede tomar entre 20 a 30 minutos, dependiendo de
+                                            tu ritmo.
+                                            <br><br>
+                                            <b>En Vehículo:</b> Desde el centro de Arica, dirígete hacia el sur por la
+                                            avenida Comandante San Martín en dirección al puerto. Gira a la derecha en
+                                            la calle Sotomayor y luego toma la primera salida a la derecha hacia la
+                                            calle
+                                            Colón. Sigue las señales hacia el Morro de Arica. Encontrarás un
+                                            estacionamiento
+                                            en la base del morro, donde podrás dejar tu vehículo y subir caminando
+                                            el sendero hasta la cima.
+                                            <br>
+                                            <div class="map">
+                                                <iframe
+                                                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d321.8341632709543!2d-70.32426582790572!3d-18.479798758118857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2scl!4v1718127701712!5m2!1ses!2scl"
+                                                    width="600" height="450" style="border:0;" allowfullscreen=""
+                                                    loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="contenido-2">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="text-container">
+                                        <div class="image-container">
+                                            <img src="./img/places/azapa.jpg" alt="Imagen de lugar" class="img-fluid">
+                                        </div>
+                                        <p>El Valle de Azapa, situado a pocos kilómetros al este de Arica, es un oasis
+                                            fértil
+                                            y pintoresco en medio del desierto de Atacama. Este valle es conocido por
+                                            sus extensos
+                                            campos de olivos y otros cultivos agrícolas, convirtiéndolo en una región
+                                            vital
+                                            para la producción agrícola de la zona. Además, el Valle de Azapa alberga
+                                            importantes
+                                            sitios arqueológicos con geoglifos y petroglifos que datan de tiempos
+                                            precolombinos,
+                                            ofreciendo una visión fascinante de las antiguas culturas que habitaron esta
+                                            área.
+                                            Los visitantes pueden explorar el Museo Arqueológico San Miguel de Azapa,
+                                            que exhibe
+                                            una colección impresionante de momias y artefactos de la cultura Chinchorro,
+                                            considerada
+                                            una de las más antiguas del mundo.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="details">
+                                        <h3>DATOS A CONSIDERAR:</h3>
+                                        <ul>
+                                            <li><b>Transporte:</b> Es recomendable contar con un vehículo propio
+                                                o alquilado para moverse con mayor libertad por el valle.</li>
+                                            <li><b>Hidratación y Protección Solar:</b> Lleva agua suficiente y usa
+                                                protector solar, gorra y gafas de sol, ya que el sol puede ser muy
+                                                fuerte.</li>
+                                            <li><b>Ropa Cómoda:</b> Usa ropa ligera y cómoda, adecuada para caminar
+                                                y explorar al aire libre.</li>
+                                            <li><b>Visita al Museo:</b> Planifica tiempo para visitar el Museo
+                                                Arqueológico San Miguel de Azapa y conocer más sobre la historia
+                                                local.</li>
+                                            <li><b>Productos Locales:</b> Aprovecha la oportunidad para degustar y
+                                                comprar productos locales, especialmente aceitunas y aceites.</li>
+                                            <li><b>Cámara Fotográfica:</b> Lleva una cámara para capturar los
+                                                paisajes y sitios arqueológicos del valle.</li>
+                                            <li><b>Respetar el Entorno:</b> Mantén el valle limpio y respeta los
+                                                sitios arqueológicos y naturales.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="location">
+                                        <h3>UBICACIÓN</h3>
+                                        <p><b>A Pie:</b> Desde el centro de Arica, caminar hasta el Valle de Azapa no
+                                            es común debido a la distancia y las condiciones del terreno. Se recomienda
+                                            utilizar un medio de transporte más adecuado como vehículo o bicicleta.
+                                            <br><br>
+                                            <b>En Vehículo:</b> Desde el centro de Arica, dirígete hacia el este por la
+                                            avenida Diego Portales. Sigue las señales hacia el Valle de Azapa, tomando
+                                            la ruta A-27. Esta carretera principal te llevará directamente al valle en
+                                            aproximadamente 20 minutos. Una vez en el valle, sigue las indicaciones
+                                            hacia
+                                            los diferentes puntos de interés, como el Museo Arqueológico San Miguel de
+                                            Azapa y las plantaciones de olivos.</p>
+                                        <br>
+                                        <div class="map">
+                                            <iframe
+                                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15132.826672916668!2d-70.19754682293474!3d-18.519560605373595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915009b7ff5add2d%3A0x627a9296684681eb!2sSan%20Miguel%20Azapa%2C%20Arica%2C%20Arica%20y%20Parinacota!5e0!3m2!1ses!2scl!4v1718586930328!5m2!1ses!2scl"
+                                                width="600" height="450" style="border:0;" allowfullscreen=""
+                                                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="contenido-3">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="text-container">
+                                        <div class="image-container">
+                                            <img src="./img/places/catedral.jpg" alt="Imagen de lugar"
+                                                class="img-fluid">
+                                        </div>
+                                        <p>La Catedral San Marcos es uno de los principales símbolos arquitectónicos e
+                                            históricos de la ciudad de Arica, en el norte de Chile. Construida a finales
+                                            del siglo XIX en estilo neogótico, esta imponente iglesia se destaca por su
+                                            fachada de piedra y sus altas torres que dominan el skyline de la ciudad. Su
+                                            interior alberga impresionantes vitrales y obras de arte sacro, que reflejan
+                                            la rica herencia cultural y religiosa de la región. La Catedral San Marcos
+                                            no
+                                            solo es un lugar de culto activo, sino también un importante punto de
+                                            interés
+                                            turístico que atrae a visitantes por su belleza arquitectónica y su
+                                            significado
+                                            histórico como testigo de la evolución de Arica a lo largo de los años.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="details">
+                                        <h3>DATOS A CONSIDERAR:</h3>
+                                        <ul>
+                                            <li><b>Horarios de Visita:</b> Verifica los horarios de apertura al público
+                                                y los horarios de misa si deseas asistir a una ceremonia.</li>
+                                            <li><b>Vestimenta Adecuada:</b> Se recomienda vestir de manera respetuosa y
+                                                adecuada para visitar un lugar de culto.</li>
+                                            <li><b>Fotografía:</b> Respeta las indicaciones sobre la fotografía dentro
+                                                de la catedral, especialmente durante los servicios religiosos.</li>
+                                            <li><b>Guiado y Tours:</b> Considera tomar un tour guiado para aprender más
+                                                sobre la historia y arquitectura de la catedral.</li>
+                                            <li><b>Accesibilidad:</b> La catedral es accesible para personas con
+                                                movilidad
+                                                reducida, aunque algunas áreas pueden tener restricciones.</li>
+                                            <li><b>Donaciones:</b> Si deseas contribuir al mantenimiento del lugar,
+                                                considera
+                                                realizar una donación voluntaria.</li>
+                                            <li><b>Silencio y Respeto:</b> Mantén el silencio y el respeto durante tu
+                                                visita,
+                                                especialmente si hay servicios religiosos en curso.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="location">
+                                        <h3>UBICACIÓN</h3>
+                                        <p><b>A Pie o en Transporte Público:</b> Desde el centro de Arica, camina hacia
+                                            el sur por las calles principales como 21 de Mayo o Baquedano hasta llegar
+                                            a la intersección con la calle Colón. Gira a la derecha y camina unos
+                                            cuantos
+                                            minutos más hasta la Plaza Colón, donde se encuentra la catedral.
+                                            <br><br>
+                                            <b>En Vehículo:</b> Desde el centro de Arica, conduce hacia el sur por la
+                                            avenida
+                                            Diego Portales y gira a la derecha en la calle Colón. Continúa por Colón
+                                            hasta
+                                            llegar a la Plaza Colón, donde podrás estacionar cerca de la catedral. Ten
+                                            en
+                                            cuenta que el estacionamiento puede ser limitado en el área cercana, así que
+                                            considera llegar temprano para encontrar espacio.</p>
+                                        <br>
+                                        <div class="map">
+                                            <iframe
+                                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d375.4307901869407!2d-70.32109028882407!3d-18.47891510588558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915aa993f7db0017%3A0xf29695af2202b7ba!2sCatedral%20de%20San%20Marcos!5e0!3m2!1ses!2scl!4v1718651735071!5m2!1ses!2scl"
+                                                width="600" height="450" style="border:0;" allowfullscreen=""
+                                                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="contenido-4">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="text-container">
+                                        <div class="image-container">
+                                            <img src="./img/places/cuevas.jpg" alt="Imagen de lugar" class="img-fluid">
+                                        </div>
+                                        <p>Las Cuevas de Anzota, situadas a unos 12 kilómetros al sur de Arica, Chile,
+                                            son
+                                            formaciones rocosas naturales que ofrecen una combinación única de historia
+                                            y
+                                            belleza natural. Estas cuevas fueron utilizadas por las culturas
+                                            precolombinas,
+                                            como los Chinchorro, dejando atrás petroglifos y vestigios arqueológicos que
+                                            narran
+                                            historias milenarias. Además de su valor histórico, las cuevas ofrecen
+                                            impresionantes
+                                            vistas al océano Pacífico, convirtiéndolas en un destino atractivo para los
+                                            amantes
+                                            de la naturaleza y la historia. El sendero costero que lleva a las cuevas
+                                            está bien
+                                            mantenido, proporcionando una experiencia agradable y segura para los
+                                            visitantes.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="details">
+                                        <h3>DATOS A CONSIDERAR:</h3>
+                                        <ul>
+                                            <li><b>Accesibilidad:</b> El camino hacia las cuevas es relativamente fácil, 
+                                                pero incluye algunas pendientes y rocas. Es adecuado para la mayoría de 
+                                                los visitantes, aunque se recomienda precaución.</li>
+                                            <li><b>Calzado Adecuado:</b> Usa zapatos cómodos y antideslizantes para caminar 
+                                                por terrenos irregulares y rocosos.</li>
+                                            <li><b>Protección Solar:</b> Lleva protector solar, sombrero y gafas de sol, 
+                                                ya que la exposición al sol puede ser intensa.</li>
+                                            <li><b>Hidratación:</b> Lleva suficiente agua, especialmente si planeas pasar 
+                                                un buen tiempo explorando.</li>
+                                            <li><b>Respetar el Entorno:</b> No dejes basura y respeta las inscripciones y 
+                                                grabados antiguos. Mantén el lugar limpio y preservado.</li>
+                                            <li><b>Cámara Fotográfica:</b> No olvides llevar una cámara para capturar las 
+                                                vistas impresionantes y los detalles históricos.</li>
+                                            <li><b>Horario de Visita:</b> Intenta visitar temprano en la mañana o al final 
+                                                de la tarde para evitar el calor intenso del mediodía.</li>
+                                            <li><b>Seguridad:</b> Mantén siempre la precaución y sigue las señalizaciones 
+                                                y advertencias del lugar.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="location">
+                                        <h3>UBICACIÓN</h3>
+                                        <p><b>A Pie o en Bicicleta:</b> Desde el centro de Arica, sigue la avenida Comandante 
+                                            San Martín hacia el sur. Continúa por la costanera en dirección al puerto y sigue 
+                                            las señales hacia las Cuevas de Anzota. La caminata puede tomar aproximadamente 2 
+                                            horas, por lo que es recomendable para quienes disfrutan de caminatas largas o paseos 
+                                            en bicicleta.
+                                            <br><br>
+                                            <b>En Vehículo:</b> Desde el centro de Arica, dirígete hacia el sur por la avenida 
+                                            Comandante San Martín. Sigue las señales hacia el sector de Las Machas y luego hacia 
+                                            las Cuevas de Anzota. La carretera está pavimentada y bien señalizada. El viaje en 
+                                            automóvil dura unos 20 minutos. Una vez allí, hay un estacionamiento cercano desde 
+                                            donde se puede acceder a las cuevas a pie por un sendero bien mantenido.</p>
+                                        <br>
+                                        <div class="map">
+                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d236.4116828193046!2d-70.33087529575847!3d-18.547559781822436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9150072bdd305693%3A0x54ed7cd7610e9a51!2sCuevas%20de%20Anzota!5e0!3m2!1ses!2scl!4v1718661729635!5m2!1ses!2scl" 
+                                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="contenido-5">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="text-container">
+                                        <div class="image-container">
+                                            <img src="./img/places/museo.png" alt="Imagen de lugar"
+                                                class="img-fluid">
+                                        </div>
+                                        <p>El Museo Arqueológico San Miguel de Azapa, ubicado en el fértil Valle de Azapa, 
+                                            a pocos kilómetros de Arica, es uno de los museos más importantes de Chile en 
+                                            términos de patrimonio arqueológico. Este museo alberga una colección impresionante 
+                                            de artefactos de la cultura Chinchorro, incluyendo las momias más antiguas del mundo, 
+                                            que datan de alrededor de 7,000 años atrás. Además de las momias, el museo presenta 
+                                            una amplia gama de objetos precolombinos que ilustran la vida cotidiana, las creencias 
+                                            y las prácticas funerarias de las civilizaciones que habitaron la región. La exhibición 
+                                            está organizada de manera didáctica, lo que permite a los visitantes comprender la 
+                                            evolución cultural y tecnológica de las comunidades prehispánicas del norte de Chile.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="details">
+                                        <h3>DATOS A CONSIDERAR:</h3>
+                                        <ul>
+                                            <li><b>Horarios de Visita:</b> Verifica los horarios de apertura del museo antes 
+                                                de tu visita, ya que pueden variar según la temporada.</li>
+                                            <li><b>Entradas:</b> Asegúrate de confirmar los precios de las entradas y si es 
+                                                posible comprarlas con antelación para evitar esperas.</li>
+                                            <li><b>Recorridos Guiados:</b> Considera tomar un recorrido guiado para obtener 
+                                                una comprensión más profunda de las exhibiciones y su contexto histórico.</li>
+                                            <li><b>Cámara Fotográfica:</b> Consulta las normas sobre fotografía dentro del museo. 
+                                                En algunas áreas, puede estar restringida.</li>
+                                            <li><b>Ropa Cómoda:</b> Usa ropa ligera y cómoda para disfrutar plenamente de la visita.</li>
+                                            <li><b>Accesibilidad:</b> El museo es accesible para personas con movilidad reducida, 
+                                                pero es bueno verificar detalles específicos si es necesario.</li>
+                                            <li><b>Respetar las Exhibiciones:</b> Mantén un comportamiento respetuoso y no toques 
+                                                las exhibiciones a menos que se indique lo contrario.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="location">
+                                        <h3>UBICACIÓN</h3>
+                                        <p><b>A Pie o en Bicicleta:</b> Caminar o ir en bicicleta desde Arica hasta el 
+                                            museo no es común debido a la distancia (aproximadamente 12 km). Es más 
+                                            práctico utilizar un vehículo.
+                                            <br><br>
+                                            <b>En Vehículo:</b> Desde el centro de Arica, dirígete hacia el este por la 
+                                            avenida Diego Portales. Sigue las señales hacia el Valle de Azapa tomando la 
+                                            ruta A-27. Continúa por esta carretera hasta llegar al museo, que está claramente 
+                                            señalizado. El viaje en automóvil dura aproximadamente 20 minutos y hay estacionamiento 
+                                            disponible en el lugar.</p>
+                                        <br>
+                                        <div class="map">
+                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d236.45467976038572!2d-70.18127759844256!3d-18.51647656535988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915009b9d5d9fb99%3A0x57caf29eebc07d76!2sMuseo%20Arqueol%C3%B3gico%20San%20Miguel%20de%20Azapa!5e0!3m2!1ses!2scl!4v1718662198345!5m2!1ses!2scl" 
+                                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="contenido-6">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="text-container">
+                                        <div class="image-container">
+                                            <img src="./img/places/lisera.jpg" alt="Imagen de lugar"
+                                                class="img-fluid">
+                                        </div>
+                                        <p>Playa La Lisera, ubicada a unos pocos kilómetros al sur del centro de Arica, Chile, 
+                                            es una encantadora bahía conocida por sus aguas tranquilas y cristalinas, ideales 
+                                            para nadar y practicar snorkel. Esta playa se destaca por su entorno natural, con 
+                                            suaves arenas blancas y una exuberante vegetación que ofrece sombra y frescura. 
+                                            Playa La Lisera es popular entre las familias y los turistas debido a su ambiente 
+                                            seguro y relajado, así como a las instalaciones que incluyen baños, duchas y áreas 
+                                            de picnic. La tranquilidad de sus aguas y la belleza del paisaje circundante la 
+                                            convierten en un lugar perfecto para disfrutar de un día al aire libre y descansar 
+                                            del bullicio de la ciudad.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="details">
+                                        <h3>DATOS A CONSIDERAR:</h3>
+                                        <ul>
+                                            <li><b>Accesibilidad:</b> La playa es accesible tanto en automóvil como en transporte 
+                                                público, con estacionamiento cercano.</li>
+                                            <li><b>Calzado Adecuado:</b> Lleva sandalias o zapatos de agua para proteger tus pies 
+                                                en las zonas rocosas.</li>
+                                            <li><b>Protección Solar:</b> Usa protector solar, sombrero y gafas de sol para protegerte 
+                                                del intenso sol.</li>
+                                            <li><b>Hidratación y Alimentos:</b> Lleva suficiente agua y algunos bocadillos, aunque 
+                                                hay vendedores ambulantes y kioscos cerca.</li>
+                                            <li><b>Respetar el Entorno:</b> Mantén la playa limpia y lleva tu basura contigo. 
+                                                Respeta la flora y fauna local.</li>
+                                            <li><b>Seguridad:</b> Nadar en áreas designadas y prestar atención a las indicaciones 
+                                                de los salvavidas.</li>
+                                            <li><b>Instalaciones:</b> Aprovecha las duchas, baños y áreas de picnic disponibles 
+                                                en la playa.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="location">
+                                        <h3>UBICACIÓN</h3>
+                                        <p><b>A Pie o en Bicicleta:</b> Desde el centro de Arica, dirígete hacia el sur 
+                                            por la avenida Comandante San Martín. Continúa por esta avenida bordeando la 
+                                            costa hasta llegar a Playa La Lisera. El recorrido es de aproximadamente 3 
+                                            kilómetros y puede tomar unos 30-40 minutos a pie o unos 15-20 minutos en bicicleta.
+                                            <br><br>
+                                            <b>En Vehículo:</b> Desde el centro de Arica, conduce hacia el sur por la avenida 
+                                            Comandante San Martín. Sigue las señales hacia las playas y continúa hasta llegar a 
+                                            Playa La Lisera. Hay un estacionamiento cercano donde puedes dejar tu vehículo. 
+                                            El trayecto en automóvil dura unos 10 minutos, dependiendo del tráfico.
+                                            <br><br>
+                                            <b>En Transporte Público:</b> Puedes tomar un colectivo o un bus desde el centro de 
+                                            Arica en dirección al sur, preguntando al conductor si pasa por Playa La Lisera. 
+                                            La playa está bien señalizada y el transporte público te dejará a una corta distancia 
+                                            a pie.</p>
+                                        <br>
+                                        <div class="map">
+                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d236.48617763332976!2d-70.32587097071001!3d-18.493674230514408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915aa9f06a18bdcf%3A0x25ea4caf77fbc142!2sPlaya%20La%20Lisera!5e0!3m2!1ses!2scl!4v1718662690436!5m2!1ses!2scl" 
+                                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="contenido-7">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="text-container">
+                                        <div class="image-container">
+                                            <img src="./img/places/chungara.jpg" alt="Imagen de lugar"
+                                                class="img-fluid">
+                                        </div>
+                                        <p>El Lago Chungará, ubicado en el altiplano andino de Chile, es uno de los lagos más 
+                                            altos del mundo, situado a más de 4,500 metros sobre el nivel del mar. Este impresionante 
+                                            cuerpo de agua está rodeado por majestuosos volcanes, incluyendo el Parinacota y el 
+                                            Pomerape, que se reflejan en sus cristalinas aguas. El Lago Chungará forma parte del 
+                                            Parque Nacional Lauca y es un sitio de gran valor ecológico, hogar de una diversa fauna 
+                                            andina, como flamencos, vicuñas y diversas especies de aves acuáticas. Además de su belleza 
+                                            natural, el lago es un lugar sagrado para las comunidades indígenas aymaras, quienes lo 
+                                            consideran un sitio de gran importancia cultural y espiritual.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="details">
+                                        <h3>DATOS A CONSIDERAR:</h3>
+                                        <ul>
+                                            <li><b>Altitud:</b> La altitud puede causar mal de altura. Aclimátate adecuadamente 
+                                                y lleva medicación si es necesario.</li>
+                                            <li><b>Clima:</b> Lleva ropa abrigada y en capas, ya que el clima puede ser muy frío 
+                                                y cambiar rápidamente.</li>
+                                            <li><b>Protección Solar:</b> Usa protector solar, sombrero y gafas de sol debido a la 
+                                                intensa radiación solar a gran altitud.</li>
+                                            <li><b>Hidratación y Alimentos:</b> Lleva suficiente agua y alimentos. No hay muchos 
+                                                servicios en la zona.</li>
+                                            <li><b>Accesibilidad:</b> El acceso al lago es principalmente en vehículo. Asegúrate 
+                                                de que tu vehículo esté en buen estado para el viaje.</li>
+                                            <li><b>Respeto por la Naturaleza:</b> No dejes basura y respeta la flora y fauna local. 
+                                                Sigue los senderos marcados.</li>
+                                            <li><b>Fotografía:</b> Lleva una cámara para capturar los impresionantes paisajes, pero 
+                                                respeta las restricciones en áreas protegidas.</li>
+                                            <li><b>Seguridad:</b> M Infórmate sobre el estado de las carreteras y el clima antes de 
+                                                partir. Lleva un botiquín de primeros auxilios.</li>
+                                            <li><b>Guía Local:</b> Considera contratar un guía local para una experiencia más 
+                                                enriquecedora y segura.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="location">
+                                        <h3>UBICACIÓN</h3>
+                                        <p><b>En Vehículo:</b> Desde Arica, toma la Ruta 11 hacia el este, en dirección 
+                                            al Parque Nacional Lauca. La carretera asciende por la Cordillera de los Andes 
+                                            y pasa por el poblado de Putre. El viaje desde Arica hasta el Lago Chungará es 
+                                            de aproximadamente 160 kilómetros y puede tomar entre 2.5 a 3 horas. Asegúrate 
+                                            de tener suficiente combustible y revisar las condiciones del vehículo, ya que 
+                                            la ruta incluye ascensos pronunciados y curvas cerradas.
+                                            <br><br>
+                                            <b>En Transporte Público:</b> Puedes tomar un bus desde Arica que se dirija 
+                                            hacia el Parque Nacional Lauca o Putre, y desde allí organizar transporte local 
+                                            hasta el Lago Chungará. Sin embargo, el transporte público puede ser limitado, 
+                                            por lo que es recomendable planificar con antelación y considerar la opción de 
+                                            tours organizados que incluyen transporte.
+                                            <br><br>
+                                            <b>En Tour Organizado:</b> Una opción conveniente es unirse a un tour organizado 
+                                            desde Arica. Estos tours generalmente incluyen transporte, guías expertos, y a 
+                                            veces comidas, proporcionando una experiencia más cómoda y educativa sin preocuparse 
+                                            por la logística del viaje.</p>
+                                        <br>
+                                        <div class="map">
+                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30313.26046814123!2d-69.17200837301218!3d-18.248597391326307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915a0ef8e183911d%3A0x9cfa88652a8eba41!2sLago%20Chungar%C3%A1!5e0!3m2!1ses!2scl!4v1718663264240!5m2!1ses!2scl" 
+                                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="contenido-8">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="text-container">
+                                        <div class="image-container">
+                                            <img src="./img/places/exaduana.jpg" alt="Imagen de lugar"
+                                                class="img-fluid">
+                                        </div>
+                                        <p>La Ex-Aduana de Arica, también conocida como la actual casa de la Cultura, 
+                                            es un emblemático monumento histórico situado en el centro de Arica, Chile. 
+                                            Construido en 1874 por el ingeniero francés Gustavo Eiffel, este edificio 
+                                            neoclásico fue originalmente utilizado como aduana y es un testimonio del 
+                                            auge comercial de la ciudad en el siglo XIX. Con su elegante fachada de 
+                                            piedra y hierro forjado, la Ex-Aduana es una joya arquitectónica que refleja 
+                                            la influencia europea en la región. Actualmente, el edificio alberga el 
+                                            Museo de Sitio Colon 10, que exhibe una fascinante colección de artefactos 
+                                            arqueológicos y proporciona una visión detallada de la historia precolombina 
+                                            de la zona, así como de la época en que Arica fue un importante puerto comercial.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="details">
+                                        <h3>DATOS A CONSIDERAR:</h3>
+                                        <ul>
+                                            <li><b>Horarios de Visita:</b> Verifica los horarios de apertura del museo antes 
+                                                de tu visita, ya que pueden variar según la temporada.</li>
+                                            <li><b>Entradas:</b> Asegúrate de confirmar los precios de las entradas y si es 
+                                                posible comprarlas con antelación.</li>
+                                            <li><b>Recorridos Guiados:</b> Considera tomar un recorrido guiado para obtener 
+                                                una comprensión más profunda de las exhibiciones y la historia del edificio.</li>
+                                            <li><b>Cámara Fotográfica:</b> Consulta las normas sobre fotografía dentro del 
+                                                museo y en el edificio.</li>
+                                            <li><b>Ropa Cómoda:</b> Usa ropa ligera y cómoda para disfrutar plenamente de 
+                                                la visita.</li>
+                                            <li><b>Accesibilidad:</b> El edificio es accesible para personas con movilidad 
+                                                reducida, pero es bueno verificar detalles específicos si es necesario.</li>
+                                            <li><b>Respetar las Exhibiciones:</b> Mantén un comportamiento respetuoso y no 
+                                                toques las exhibiciones a menos que se indique lo contrario.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="location">
+                                        <h3>UBICACIÓN</h3>
+                                        <p><b>A Pie:</b> Desde el centro de Arica, dirígete hacia el sur por la calle 21 de 
+                                            Mayo. Continúa caminando hasta llegar a la intersección con la calle Cristóbal 
+                                            Colón. La Ex-Aduana está ubicada en la esquina de estas calles, frente al Parque 
+                                            Vicuña Mackenna y cerca del puerto. La caminata desde la Plaza Colón hasta la 
+                                            Ex-Aduana toma unos 10 minutos.
+                                            <br><br>
+                                            <b>En Vehículo:</b> Desde cualquier punto de Arica, conduce hacia el centro de la 
+                                            ciudad y dirígete hacia la calle Cristóbal Colón. Sigue las señales hacia el puerto 
+                                            y el Parque Vicuña Mackenna. Hay estacionamientos disponibles cerca del edificio, 
+                                            aunque pueden estar limitados en horas pico. El trayecto en automóvil dentro de la 
+                                            ciudad es corto y directo.</p>
+                                        <br>
+                                        <div class="map">
+                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d364.746458573921!2d-70.32136194129694!3d-18.4772642161905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915aa97029d4bf3f%3A0x10af0f89d359e377!2sEx%20Aduana%2FCasa%20de%20la%20Cultura%20de%20Arica!5e0!3m2!1ses!2scl!4v1718663799025!5m2!1ses!2scl" 
+                                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4">
+                    <p>DescubreAyP Organización sin fines de lucro <br> Fono contacto: (+56 9) 87654321 <br>
+                        E-mail:
+                        descubreayp@correo.cl <br> Dirección: Calle falsa #123 Arica.</p>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <div class="social-media">
+                        <a href="#"><img src="./img/facebook.png" alt="logo Facebook"></a>
+                        <a href="#"><img src="./img/instagram.png" alt="logo Instagram"></a>
+                        <a href="#"><img src="./img/x.png" alt="logo X"></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <p class="copyright">&copy; 2024 DescubreAyP | Todos los derechos reservados |
+                        Desarrollado
+                        por Abdiel
+                        Villar</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+    <script src="./js/lugares.js"></script>
+</body>
+
+</html>

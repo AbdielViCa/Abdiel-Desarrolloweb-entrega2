@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libro del visitante</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/estilos.css">
+  <link rel="icon" href="./img/logo2.png" type="image/x-icon">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="container">
+      <header class="row">
+        <nav class="navbar navbar-dark bg-dark fixed-top">
+          <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <a href="./Index.html"><img class="logoImg" src="./img/logo.png" alt="Logo"></a>
+            <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+              aria-labelledby="offcanvasDarkNavbarLabel">
+              <div class="offcanvas-header">
+                <a href="./Index.html"><img class="logoImg" src="./img/logo.png" alt="Logo"></a>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                  aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="./Index.html">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="./lugares.html">Lugares</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="./historia.html">Historia</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="./libro-del-visitante.html">Libro del
+                      Visitante</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="./nosotros.html">Nosotros</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+    <main class="book">
+        <div class="visitor-book">
+            <h2>¿Visitaste la región de Arica y Parinacota? Déjanos tus impresiones y/o recomendaciones:</h2>
+            <p>(Los comentarios serán revisados antes de aparecer en la plataforma)</p>
+            <div class="comment-form">
+                <div class="avatar-upload">
+                    <img src="./img/profile.png" alt="Avatar">
+                    <button class="load-pic">Subir imagen de perfil</button>
+                </div>
+                <div class="form-container">
+                    <form>
+                        <input id="nombreVisit" type="text" placeholder="Nombre y Apellidos">
+                        <textarea id="lugaresVisit"
+                            placeholder="Escriba los lugares principales visitados (max. 50 caracteres)"></textarea>
+                        <textarea id="descripcionComent"
+                            placeholder="Describa sus experiencias. (max. 255 caracteres)"></textarea>
+                        <div class="form-actions">
+                            <button type="button" class="submit-google">Comentar con <img
+                                    src="./img/google-mas (1).png"></button>
+                            <button type="button" class="submit-fb">Comentar con <img
+                                    src="./img/facebook (1).png"></button>
+                        </div>
+                        <button type="submit" class="submit">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <section id="coment-book" class="coment-book">
+            <button class="prev-book-btn">❮</button>
+            <div class="slide-book">
+                <blockquote class="blk-book">
+                    <div class="avatar-book">
+                        <img src="./img/coment/1.jpg" alt="Foto de perfil">
+                        <p class="fecha-book">Comentado el 15-05-2024</p>
+                    </div>
+                    <div class="comment-content">
+                        <p class="visitados-book">Lugares visitados: Ciudad de Arica, Lago Chungará, Putre</p>
+                        <p class="coment-user">"Arica es una joya escondida de Chile, con su clima cálido todo el año y
+                            sus
+                            hermosas playas. La mezcla de culturas y su rica historia, junto con su cercanía al desierto
+                            de Atacama, la hacen
+                            un destino fascinante para explorar. Feliz de haber estado allí!"</p>
+                    </div>
+                </blockquote>
+                <blockquote class="blk-book">
+                    <div class="avatar-book">
+                        <img src="./img/coment/2.jpeg" alt="Foto de perfil">
+                        <p class="fecha-book">Comentado el 17-05-2024</p>
+                    </div>
+                    <div class="comment-content">
+                        <p class="visitados-book">Lugares visitados: Ciudad de Arica, Playas y valles</p>
+                        <p class="coment-user">"Las playas de Arica, son un paraíso para los amantes del sol y el surf.
+                            Con su
+                            permanente clima cálido, olas perfectas y arenas doradas, destacan playas como El Laucho y
+                            La Lisera. Además, la rica
+                            cultura y gastronomía complementan esta experiencia única"</p>
+                    </div>
+                </blockquote>
+                <blockquote class="blk-book">
+                    <div class="avatar-book">
+                        <img src="./img/coment/3.jpg" alt="Foto de perfil">
+                        <p class="fecha-book">Comentado el 19-05-2024</p>
+                    </div>
+                    <div class="comment-content">
+                        <p class="visitados-book">Lugares visitados: Ciudad de Arica, Azapa y morro</p>
+                        <p class="coment-user">"El valle de Azapa es famoso por su producción de aceitunas y
+                            arqueología, con
+                            geoglifos y momias de la cultura Chinchorro. El Morro, símbolo histórico, ofrece panorámicas
+                            de la ciudad y el mar, siendo un
+                            recordatorio de la Guerra del Pacífico."</p>
+                    </div>
+                </blockquote>
+            </div>
+            <button class="next-book-btn">❯</button>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4">
+                    <p>DescubreAyP Organización sin fines de lucro <br> Fono contacto: (+56 9) 87654321 <br> E-mail:
+                        descubreayp@correo.cl <br> Dirección: Calle falsa #123 Arica.</p>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <div class="social-media">
+                        <a href="#"><img src="./img/facebook.png" alt="logo Facebook"></a>
+                        <a href="#"><img src="./img/instagram.png" alt="logo Instagram"></a>
+                        <a href="#"><img src="./img/x.png" alt="logo X"></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <p class="copyright">&copy; 2024 DescubreAyP | Todos los derechos reservados | Desarrollado por
+                        Abdiel
+                        Villar</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

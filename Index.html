@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Descubre Arica y Parinacota</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/estilos.css">
+  <link rel="icon" href="./img/logo2.png" type="image/x-icon">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="container">
+      <header class="row">
+        <nav class="navbar navbar-dark bg-dark fixed-top">
+          <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <a href="./Index.html"><img class="logoImg" src="./img/logo.png" alt="Logo"></a>
+            <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+              aria-labelledby="offcanvasDarkNavbarLabel">
+              <div class="offcanvas-header">
+                <a href="./Index.html"><img class="logoImg" src="./img/logo.png" alt="Logo"></a>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                  aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="./Index.html">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="./lugares.html">Lugares</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="./historia.html">Historia</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="./libro-del-visitante.html">Libro del
+                      Visitante</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="./nosotros.html">Nosotros</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <section id="inicio" class="slider">
+          <div id="sliderPrincipal" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#sliderPrincipal" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#sliderPrincipal" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#sliderPrincipal" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#sliderPrincipal" data-bs-slide-to="3"
+                aria-label="Slide 4"></button>
+              <button type="button" data-bs-target="#sliderPrincipal" data-bs-slide-to="4"
+                aria-label="Slide 5"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./img/slider/1.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./img/slider/2.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./img/slider/3.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./img/slider/4.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./img/slider/5.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#sliderPrincipal" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#sliderPrincipal" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Siguiente</span>
+            </button>
+          </div>
+        </section>
+
+        <section id="articulos-arica" class="content">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <h2>| Artículos de interés</h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 col-lg-6 mb-4 d-flex">
+                <article class="main-art d-flex flex-column">
+                  <img src="./img/art/momia.jpg" alt="Lugar 1" class="img-fluid">
+                  <p>Las momias del Chinchorro, encontradas en la costa norte de Chile y sur de Perú, son los restos de
+                    una cultura prehistórica que vivió entre 7.000 y 3.000 años atrás. Esta cultura desarrolló la
+                    técnica de momificación artificial más antigua del mundo. Estas prácticas reflejan un profundo
+                    respeto por los muertos y un fuerte sentido comunitario. Las momias del Chinchorro son un valioso
+                    patrimonio arqueológico que ofrece una visión única de una de las sociedades más antiguas de
+                    América.</p>
+                </article>
+              </div>
+              <div class="col-md-6 col-lg-6 mb-4 d-flex">
+                <article class="main-art d-flex flex-column">
+                  <img src="./img/art/morro.jpg" alt="Lugar 2" class="img-fluid">
+                  <p>El Morro de Arica es un prominente promontorio costero ubicado en la ciudad de Arica, en el norte
+                    de Chile. Tiene una altura de 130 metros y es un símbolo histórico y turístico de la ciudad. Durante
+                    la Guerra del Pacífico, el Morro de Arica fue el escenario de una batalla crucial el 7 de junio de
+                    1880. Las fuerzas chilenas, lideradas por el coronel Pedro Lagos, tomaron el morro en un asalto
+                    decisivo contra las tropas peruanas. Esta victoria permitió a Chile consolidar su control sobre la
+                    ciudad y fue un punto clave en la guerra. Hoy, el Morro de Arica es un lugar conmemorativo, con un
+                    monumento a los héroes de la batalla y un museo histórico y de armas. Además, ofrece vistas
+                    panorámicas de la ciudad y el océano, siendo un destino popular para turistas y residentes.</p>
+                </article>
+              </div>
+              <div class="col-md-6 col-lg-6 mb-4 d-flex">
+                <article class="main-art d-flex flex-column">
+                  <img src="./img/art/cuevas.jpg" alt="Lugar 3" class="img-fluid">
+                  <p>Las Cuevas de Anzota son formaciones rocosas ubicadas cerca de Arica, en el norte de Chile. Estas
+                    cuevas, talladas por la acción del mar, fueron habitadas por la cultura Chinchorro hace miles de
+                    años. Las Cuevas de Anzota son conocidas por sus impresionantes paisajes costeros y vistas del
+                    océano Pacífico. Además de su valor natural, tienen importancia arqueológica debido a la presencia
+                    de restos de la antigua cultura Chinchorro, famosa por sus técnicas de momificación. Actualmente,
+                    las Cuevas de Anzota son un popular destino turístico, con senderos bien señalizados que permiten a
+                    los visitantes explorar sus formaciones geológicas y disfrutar de la belleza del entorno natural.
+                  </p>
+                </article>
+              </div>
+              <div class="col-md-6 col-lg-6 mb-4 d-flex">
+                <article class="main-art d-flex flex-column">
+                  <img src="./img/art/azapa.jpg" alt="Lugar 4" class="img-fluid">
+                  <p>El Valle de Azapa, situado cerca de Arica en el norte de Chile, es un fértil oasis en medio del
+                    desierto de Atacama. Este valle es famoso por su producción agrícola, especialmente de aceitunas y
+                    tomates. Además de su riqueza agrícola, el Valle de Azapa es un importante sitio arqueológico. Aquí
+                    se han encontrado numerosos geoglifos y petroglifos, así como cementerios de la cultura Chinchorro,
+                    conocidos por sus momias antiguas. El Museo Arqueológico de San Miguel de Azapa, ubicado en el
+                    valle, exhibe artefactos y momias de la región, ofreciendo una visión profunda de las culturas
+                    precolombinas que habitaron la zona. Hoy, el Valle de Azapa combina su legado histórico con una
+                    vibrante actividad agrícola, siendo un atractivo tanto para arqueólogos como para turistas
+                    interesados en la historia y la naturaleza.</p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="coment-recent" class="coments">
+          <div class="row justify-content-center">
+            <div class="col-md-10">
+              <button class="prev-coment-btn">❮</button>
+              <div class="comment-slide">
+                <blockquote>
+                  <div class="avatar">
+                    <img src="./img/coment/1.jpg" alt="Foto de perfil">
+                    <p class="fecha-coment">Comentado el 15-05-2024</p>
+                  </div>
+                  <p class="visitados">Lugares visitados: Ciudad de Arica, Lago Chungará, Putre</p>
+                  <p class="coment">"Arica es una joya escondida de Chile, con su clima cálido todo el año y sus
+                    hermosas playas. La mezcla de culturas y su rica historia, junto con su cercanía al desierto de
+                    Atacama, la hacen un destino fascinante para explorar. Feliz de haber estado allí!"</p>
+                </blockquote>
+                <blockquote>
+                  <div class="avatar">
+                    <img src="./img/coment/2.jpeg" alt="Foto de perfil">
+                    <p class="fecha-coment">Comentado el 17-05-2024</p>
+                  </div>
+                  <p class="visitados">Lugares visitados: Ciudad de Arica, Playas y valles</p>
+                  <p class="coment">"Las playas de Arica, son un paraíso para los amantes del sol y el surf. Con su
+                    permanente clima cálido, olas perfectas y arenas doradas, destacan playas como El Laucho y La
+                    Lisera. Además, la rica cultura y gastronomía complementan esta experiencia única"</p>
+                </blockquote>
+                <blockquote>
+                  <div class="avatar">
+                    <img src="./img/coment/3.jpg" alt="Foto de perfil">
+                    <p class="fecha-coment">Comentado el 19-05-2024</p>
+                  </div>
+                  <p class="visitados">Lugares visitados: Ciudad de Arica, Azapa y morro</p>
+                  <p class="coment">"El valle de Azapa es famoso por su producción de aceitunas y arqueología, con
+                    geoglifos y momias de la cultura Chinchorro. El Morro, símbolo histórico, ofrece panorámicas de la
+                    ciudad y el mar, siendo un recordatorio de la Guerra del Pacífico."</p>
+                </blockquote>
+              </div>
+              <button class="next-coment-btn">❯</button>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 col-md-4">
+              <p>DescubreAyP Organización sin fines de lucro <br> Fono contacto: (+56 9) 87654321 <br> E-mail:
+                descubreayp@correo.cl <br> Dirección: Calle falsa #123 Arica.</p>
+            </div>
+            <div class="col-lg-4 col-md-4">
+              <div class="social-media">
+                <a href="#"><img src="./img/facebook.png" alt="logo Facebook"></a>
+                <a href="#"><img src="./img/instagram.png" alt="logo Instagram"></a>
+                <a href="#"><img src="./img/x.png" alt="logo X"></a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4">
+              <p class="copyright">&copy; 2024 DescubreAyP | Todos los derechos reservados | Desarrollado por Abdiel
+                Villar</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+  </script>
+  <script src="./js/index.js"></script>
+</body>
+
+</html>
