@@ -9,18 +9,6 @@
     padding: 0;
 }
 
-/* Algunas variables root */
-:root {
-    --primary-color: #3B7DD8;
-    --secondary-color: #1C4A70;
-    --light-background: #FFFFFF;
-    --text-color: #FFFFFF;
-    --header-height: 60px;
-    --gap-size: 20px;
-    --transition-duration: 250ms;
-}
-
-
 html,
 body {
     max-width: 100%;
@@ -33,7 +21,7 @@ body {
     background-attachment: fixed;
     font-family: 'Space Grotesk', Arial, sans-serif;
     line-height: 1.6;
-    color: var(--secondary-color);
+    color: #1C4A70;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -78,12 +66,20 @@ main {
     width: 100%;
 }
 
+main h1 {
+    margin-top: 85px;
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bold;
+    color: #1C4A70;
+}
+
 /* Slider de imágenes - index.html */
 .slider {
     text-align: center;
     padding: 0;
     margin-bottom: 30px;
-    margin-top: 75px;
+    margin-top: 25px;
 }
 
 #sliderPrincipal {
@@ -103,9 +99,10 @@ main {
 }
 
 .content h2 {
-    color: var(--secondary-color);
+    color: #1C4A70;
     margin: 25px 0 15px 25px;
     text-align: left;
+    font-size: xx-large;
 }
 
 .main-art {
@@ -122,7 +119,7 @@ main {
 }
 
 .main-art p {
-    color: var(--secondary-color);
+    color: #1C4A70;
     margin: 20px 0;
     padding: 15px;
     font-size: 14px;
@@ -155,7 +152,7 @@ main {
     text-align: center;
     padding: 10px;
     background-color: #494949;
-    color: var(--text-color);
+    color: #FFFFFF;
     height: 240px;
     display: flex;
     align-items: center;
@@ -182,7 +179,7 @@ main {
     background: none;
     border: none;
     font-size: 2em;
-    color: var(--text-color);
+    color: #FFFFFF;
     cursor: pointer;
     z-index: 1;
 }
@@ -233,7 +230,7 @@ blockquote {
     height: 140px;
     width: 140px;
     border-radius: 50%;
-    border: 3px solid var(--light-background);
+    border: 3px solid #FFFFFF;
     box-shadow: 2px 2px 4px rgba(0, 0, 1, 0.5);
     margin-bottom: 5px;
     margin-top: 15px;
@@ -243,7 +240,7 @@ blockquote {
     margin-left: 180px;
     text-align: left;
     margin-top: 0;
-    color: var(--text-color);
+    color: #FFFFFF;
 }
 
 /* Estilos footer */
@@ -252,7 +249,7 @@ footer {
     flex-direction: column;
     align-items: center;
     background: linear-gradient(90deg, rgba(37, 50, 88, 1) 0%, rgba(43, 91, 138, 1) 100%);
-    color: var(--text-color);
+    color: #FFFFFF;
     text-align: center;
     padding: 10px 20px;
     width: 100%;
@@ -289,7 +286,13 @@ footer .social-media a img {
 
 /* Estilos "Lugares" */
 .text-container p, .details ul, .details li, .location iframe {
-    color: var(--secondary-color);
+    color: #1C4A70;
+}
+
+#places-info h1 {
+    margin-top: 85px;
+    margin-left: 25px;
+    font-size: xx-large;
 }
 
 .image-container {
@@ -305,7 +308,7 @@ footer .social-media a img {
 
 .text-container {
     padding: 20px;
-    margin-top: 75px;
+    margin-top: 25px;
     margin-right: 15px;
     background-color: rgba(240, 248, 255, 0.8);
     box-shadow: 2px 2px 4px rgba(0, 0, 1, 0.1);
@@ -321,14 +324,16 @@ footer .social-media a img {
     margin-right: 15px;
 }
 
-.details h3{
-    color: var(--secondary-color);
+.details h2{
+    color: #1C4A70;
     margin-bottom: 15px;
+    font-size: x-large;
 }
 
-.location h3 {
+.location h2 {
     color: rgba(240, 248, 255);
     margin-bottom: 15px;
+    font-size: x-large;
 }
 
 .details ul {
@@ -342,7 +347,7 @@ footer .social-media a img {
 }
 
 .location {
-    background-color: var(--secondary-color);
+    background-color: #1C4A70;
     box-shadow: 2px 2px 4px rgba(0, 0, 1, 0.1);
     padding: 20px;
     border-radius: 8px;
@@ -515,7 +520,7 @@ footer .social-media a img {
 /* Estilos "Historia" */
 .timeline-container {
     background-color: #494949;
-    margin-top: 70px;
+    margin-top: 56px;
     position:fixed;
     width: 100%;
 }
@@ -535,11 +540,11 @@ footer .social-media a img {
 
 .hrLinea {
     position: absolute;
-    top: 40%;
+    top: 35%;
     left: 0;
     width: 100%;
     border: 1px solid #1BB286;
-    z-index: 0; /* Asegúrese de que la línea esté detrás de los elementos */
+    z-index: 0;
 }
 
 .timeline-item {
@@ -547,7 +552,7 @@ footer .social-media a img {
     flex-direction: column;
     align-items: center;
     position: relative;
-    z-index: 1; /* Asegúrese de que los elementos estén por encima de la línea */
+    z-index: 1; 
     margin: 0 10px;
 }
 
@@ -573,8 +578,13 @@ footer .social-media a img {
     height: 100px;
     width: 100px;
     border-radius: 50%;
-    border: 3px solid var(--light-background, #f5f5f5);
+    border: 3px solid #FFFFFF;
     box-shadow: 2px 2px 4px rgba(0, 0, 1, 0.5);
+}
+
+.content-historia h1 {
+    margin: 320px 0px 25px 25px;
+    font-size: xx-large;
 }
 
 main.historia {
@@ -586,7 +596,6 @@ main.historia {
     width: 100%;
     padding: 20px;
     box-sizing: border-box;
-    margin-top: 240px;
 }
 
 .historia-item {
@@ -599,11 +608,13 @@ main.historia {
     align-items: center;
     text-align: center;
     border-radius: 10px;
+    margin-bottom: 25px;
 }
 
 .image-containerHist {
     width: 30%;
     margin-right: 20px;
+    margin-bottom: 20px;
 }
 
 .image-containerHist img {
@@ -613,8 +624,8 @@ main.historia {
     margin-top: 20px;
 }
 
-.image-containerHist h3 {
-    max-width: 30%;
+.text-containerHist h2 {
+    font-size: x-large;
 }
 
 .text-containerHist {
@@ -627,7 +638,14 @@ main.historia {
     width: 100%;
     padding: 20px;
     box-sizing: border-box;
-    margin-top: 70px;
+    margin-top: 35px;
+}
+
+.book h1 {
+    color: #1C4A70;
+    margin: 30px 0 25px 25px;
+    text-align: left;
+    font-size: xx-large;
 }
 
 .visitor-book {
@@ -667,7 +685,7 @@ main.historia {
     height: 130px;
     width: 130px;
     border-radius: 50%;
-    border: 3px solid var(--light-background, #f5f5f5);
+    border: 3px solid #FFFFFF;
     box-shadow: 2px 2px 4px rgba(0, 0, 1, 0.5);
     margin-bottom: 5px;
     margin-top: 15px;
@@ -697,6 +715,10 @@ main.historia {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+form label {
+    font-weight: bold;
 }
 
 .form-container input,
@@ -759,7 +781,7 @@ main.historia {
     position: relative;
     text-align: center;
     background-color: #494949;
-    color: var(--text-color);
+    color: #FFFFFF;
     height: auto;
     display: flex;
     align-items: center;
@@ -776,7 +798,7 @@ main.historia {
     background: none;
     border: none;
     font-size: 2em;
-    color: var(--text-color);
+    color: #FFFFFF;
     cursor: pointer;
     z-index: 1;
 }
@@ -830,7 +852,7 @@ main.historia {
     height: 120px;
     width: 120px;
     border-radius: 50%;
-    border: 3px solid var(--light-background);
+    border: 3px solid #FFFFFF;
     box-shadow: 2px 2px 4px rgba(0, 0, 1, 0.5);
 }
 
@@ -848,26 +870,43 @@ main.historia {
 
 .coment-user {
     text-align: center;
-    color: var(--text-color);
+    color: #FFFFFF;
 }
 
 
 /* Estilos "nosotros" */
 .nosotros {
-    margin-top: 70px;
+    margin-top: 45px;
     display: flex;
     align-items: center;
 }
 
+#nosotros-text {
+    background-color: rgba(240, 248, 255, 0.8);
+    padding: 15px 15px;
+}
+
+#nosotros-text h2 {
+    color: #1C4A70;
+    font-size: x-large;
+    margin: 25px 0px 10px 0px;
+}
+
+#nosotros-text p {
+    margin-bottom: 25px;
+}
+
 .nosotros-title {
+    color: #1C4A70;
+    margin: 25px 0 25px 25px;
     text-align: left;
     font-size: xx-large;
+    display: block;
 }
 
 .about-us {
     margin: auto;
     width: 70%;
-    background-color: rgba(240, 248, 255, 0.8);
     padding: 20px;
     border-radius: 8px;
     text-align: center;
@@ -921,7 +960,7 @@ main.historia {
 
     .text-container {
         padding: 0;
-        margin-top: 35px;
+        margin-top: 5px;
     }
 
     .details, .location {
@@ -945,6 +984,11 @@ main.historia {
         border: 3px solid #993bd8;
         width: 90px;
         height: 90px;
+    }
+
+    #places-info h1 {
+        margin-top: 40px;
+        margin-left: 15px;
     }
 
 }
