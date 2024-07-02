@@ -536,6 +536,16 @@ footer .social-media a img {
     display: none;
 }
 
+.timeline {
+    position: fixed;
+    top: 100px; /* Coloca la línea en el centro vertical del contenedor */
+    width: 100%;
+    z-index: -1; /* Asegura que esté detrás de los elementos .horizontal-sidebar-Hitem */
+    border: none;
+    border-top: 2px solid #ffdb0d; /* Agrega la línea con el color deseado y grosor */
+    box-shadow: 0 4px 6px rgba(241, 255, 40, 0.9); /* Agrega la sombra a la línea */
+}
+
 #barraHist {
     width: 1920px;
     width: 100%;
@@ -552,6 +562,7 @@ footer .social-media a img {
     display: inline-block;
     margin: 0px 20px;
     text-align: center;
+    z-index: 2;
 }
 
 .horizontal-sidebar-Hitem a {
