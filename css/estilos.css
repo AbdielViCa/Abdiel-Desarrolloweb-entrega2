@@ -518,6 +518,64 @@ footer .social-media a img {
 
 
 /* Estilos "Historia" */
+main.historia {
+    display: flex;
+    justify-content: center;
+}
+
+.content-historia h1 {
+    margin: 50px 0px 25px 25px;
+    font-size: xx-large;
+    text-align: center;
+}
+
+.content-historia {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.historia-item {
+    padding: 20px;
+    margin-top: 25px;
+    background-color: rgba(240, 248, 255, 0.8);
+    box-shadow: 2px 2px 4px rgba(0, 0, 1, 0.1);
+    border-radius: 8px;
+}
+
+.historia-item p {
+    margin-top: 25px;
+}
+
+.image-containerHist {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.image-containerHist img {
+    width: 35%;
+    height: auto;
+    border-radius: 20px;
+    margin-right: 20px;
+}
+
+.image-containerHist h2 {
+    font-size: x-large;
+    margin: 0;
+}
+
+.text-containerHist {
+    width: 100%;
+}
+
+/* estilos barra horizontal - Historia*/
 .horizontal-sidebar-Hcontainer {
     display: inline-flex !important;
     position:fixed;
@@ -529,7 +587,7 @@ footer .social-media a img {
     white-space: nowrap;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .horizontal-sidebar-Hcontainer ::-webkit-scrollbar {
@@ -538,12 +596,42 @@ footer .social-media a img {
 
 .timeline {
     position: fixed;
-    top: 100px; /* Coloca la línea en el centro vertical del contenedor */
+    top: 100px;
     width: 100%;
-    z-index: -1; /* Asegura que esté detrás de los elementos .horizontal-sidebar-Hitem */
+    z-index: -1;
     border: none;
-    border-top: 2px solid #ffdb0d; /* Agrega la línea con el color deseado y grosor */
-    box-shadow: 0 4px 6px rgba(241, 255, 40, 0.9); /* Agrega la sombra a la línea */
+    border-top: 2px solid #ffdb0d;
+    box-shadow:         
+    0 -4px 6px rgba(252, 253, 162, 0.9),
+    0 4px 6px rgba(252, 253, 162, 0.9);
+}
+
+#prevHistbutton,
+#nextHistbutton {
+    position: fixed;
+    top: 100px;
+    color: #b9b9b9;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+#prevHistbutton:hover,
+#nextHistbutton:hover {
+    color: #ffffff;
+    opacity: 0,9;
+}
+
+#prevHistbutton {
+    left: 10px;
+}
+
+#nextHistbutton {
+    right: 10px;
+}
+
+#prevHistbutton p, #nextHistbutton p {
+    font-size: small;
+    font-weight: bolder;
 }
 
 #barraHist {
@@ -586,56 +674,6 @@ footer .social-media a img {
     border: 3px solid #993bd8;
     width: 90px;
     height: 90px;
-}
-
-main.historia {
-    display: flex;
-    justify-content: center;
-}
-
-.content-historia h1 {
-    margin: 320px 0px 25px 25px;
-    font-size: xx-large;
-}
-
-.content-historia {
-    width: 100%;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.historia-item {
-    background-color: rgba(240, 248, 255, 0.8);
-    box-shadow: 2px 2px 4px rgba(0, 0, 1, 0.1);
-    padding: 10px;
-    flex: 1 1 calc(50% - 20px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    border-radius: 10px;
-    margin-bottom: 25px;
-}
-
-.image-containerHist {
-    width: 30%;
-    margin-right: 20px;
-    margin-bottom: 20px;
-}
-
-.image-containerHist img {
-    max-width: 70%;
-    height: auto;
-    border-radius: 20px;
-    margin-top: 20px;
-}
-
-.text-containerHist h2 {
-    font-size: x-large;
-}
-
-.text-containerHist {
-    width: 70%;
 }
 
 
@@ -962,6 +1000,42 @@ form label {
     .text-container, .details, .location {
         margin: 0;
         border-radius: 0px;
+    }
+
+    .content-historia {
+        margin: 0;
+        border-radius: 0px;
+        padding: 0;
+        margin-top: 5px;
+    }
+
+    .historia-item {
+        margin: 0;
+        border-radius: 0px;
+        padding: 0;
+        margin-top: 5px;
+    }
+
+    .image-containerHist {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-containerHist img {
+        margin: 0px;
+        padding: 0px;
+        border-radius: 0px;
+        width: 100%;
+        height: auto;
+    }
+
+    .image-containerHist h2 {
+        margin-top: 25px;
+    }
+    
+    .historia-item p {
+        padding: 20px;
+        text-align: justify;
     }
 
     .text-container {

@@ -1,91 +1,95 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const horizontalLinks = document.querySelectorAll('.horizontal-sidebar-Hitem a');
+    const sidebarLinks = document.querySelectorAll('.horizontal-sidebar-Hitem a');
   
     const contenidos = {
-        'Antes de 10,000 a.C.': document.getElementById('contenido-1'),
-        '7000 a.C. - 1500 a.C.': document.getElementById('contenido-2'),
-        'Siglo XV - 1535 d. C.': document.getElementById('contenido-3'),
-        '1535 - 1821': document.getElementById('contenido-4'),
-        '1879 - 1884': document.getElementById('contenido-5'),
-        '1884 - Actualidad': document.getElementById('contenido-6')
+      prehistoria: document.getElementById('periodo-1'),
+      chinchorro: document.getElementById('periodo-2'),
+      inca: document.getElementById('periodo-3'),
+      conquista: document.getElementById('periodo-4'),
+      toma: document.getElementById('periodo-5'),
+      actual: document.getElementById('periodo-6')
     };
   
     function mostrarContenido(periodo) {
-        for (const key in contenidos) {
-            if (contenidos[key]) {
-                contenidos[key].style.display = 'none';
-            }
-        }
-        if (contenidos[periodo]) {
-            contenidos[periodo].style.display = 'block';
-        }
+      for (const key in contenidos) {
+        contenidos[key].style.display = 'none';
+      }
+      if (contenidos[periodo]) {
+        contenidos[periodo].style.display = 'block';
+      }
     }
   
     function activarYMostrar(link) {
-        const periodo = link.querySelector('p').textContent;
+      const periodo = link.dataset.periodo;
   
-        link.parentElement.classList.add('active');
+      link.parentElement.classList.add('active');
   
-        mostrarContenido(periodo);
+      mostrarContenido(periodo);
   
+      const parentContainer = link.closest('.horizontal-sidebar-Hcontainer');
+      if (parentContainer) {
         link.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      }
     }
   
-    if (horizontalLinks.length > 0) {
-        activarYMostrar(horizontalLinks[0]);
+    if (sidebarLinks.length > 0) {
+      activarYMostrar(sidebarLinks[0]);
     }
   
-    horizontalLinks.forEach(link => {
-        link.addEventListener('click', (event) => {
-            event.preventDefault();
-            activarYMostrar(link);
-            horizontalLinks.forEach(otherLink => {
-                if (otherLink !== link) {
-                    otherLink.parentElement.classList.remove('active');
-                }
-            });
+    sidebarLinks.forEach(link => {
+      link.addEventListener('click', (event) => {
+        event.preventDefault();
+        activarYMostrar(link);
+        sidebarLinks.forEach(otherLink => {
+          if (otherLink !== link) {
+            otherLink.parentElement.classList.remove('active');
+          }
         });
+      });
     });
   
-    const nextHButton = document.getElementById('nextHbutton');
-    if (nextHButton) {
-        nextHButton.addEventListener('click', (event) => {
-            event.preventDefault();
-            selectNextItem(horizontalLinks);
-        });
+    const nextHistbutton = document.getElementById('nextHistbutton');
+    if (nextHistbutton) {
+      nextHistbutton.addEventListener('click', (event) => {
+        event.preventDefault();
+        selectNextItem(sidebarLinks);
+      });
     }
   
-    const prevHButton = document.getElementById('prevHbutton');
-    if (prevHButton) {
-        prevHButton.addEventListener('click', (event) => {
-            event.preventDefault();
-            selectPreviousItem(horizontalLinks);
-        });
+    const prevHistbutton = document.getElementById('prevHistbutton');
+    if (prevHistbutton) {
+      prevHistbutton.addEventListener('click', (event) => {
+        event.preventDefault();
+        selectPreviousItem(sidebarLinks);
+      });
     }
   
     function selectNextItem(links) {
-        const currentActive = document.querySelector('.horizontal-sidebar-Hitem.active a');
-        let currentIndex = Array.from(links).indexOf(currentActive);
+      const currentActive = document.querySelector('.horizontal-sidebar-Hitem.active a');
+      let currentIndex = Array.from(links).indexOf(currentActive);
   
-        if (currentActive) {
-            currentActive.parentElement.classList.remove('active');
-        }
+      if (currentActive) {
+        currentActive.parentElement.classList.remove('active');
+      }
   
-        currentIndex = (currentIndex + 1) % links.length;
-        const nextLink = links[currentIndex];
-        activarYMostrar(nextLink);
+      currentIndex = (currentIndex + 1) % links.length;
+      const nextLink = links[currentIndex];
+      activarYMostrar(nextLink);
+      nextLink.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
     }
   
     function selectPreviousItem(links) {
-        const currentActive = document.querySelector('.horizontal-sidebar-Hitem.active a');
-        let currentIndex = Array.from(links).indexOf(currentActive);
+      const currentActive = document.querySelector('.horizontal-sidebar-Hitem.active a');
+      let currentIndex = Array.from(links).indexOf(currentActive);
   
-        if (currentActive) {
-            currentActive.parentElement.classList.remove('active');
-        }
+      if (currentActive) {
+        currentActive.parentElement.classList.remove('active');
+      }
   
-        currentIndex = (currentIndex - 1 + links.length) % links.length;
-        const prevLink = links[currentIndex];
-        activarYMostrar(prevLink);
+      currentIndex = (currentIndex - 1 + links.length) % links.length;
+      const prevLink = links[currentIndex];
+      activarYMostrar(prevLink);
+      prevLink.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
     }
-});
+  });
+  
