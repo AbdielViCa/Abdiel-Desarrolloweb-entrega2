@@ -731,23 +731,20 @@ main.historia {
     border-radius: 50%;
     border: 3px solid #FFFFFF;
     box-shadow: 2px 2px 4px rgba(0, 0, 1, 0.5);
-    margin-bottom: 5px;
-    margin-top: 15px;
-    transform: translateX(60%);
+    margin: 15px 0px 5px 35%;
 }
 
 
 .load-pic {
     margin-top: 10px;
     margin-left: 20px;
-    padding: 5px 10px;
-    border: none;
+    padding: 5px 0px;
+    width: 360px;
     border: 1px solid #1BB286;
     color: #1BB286;
     font-weight: bold;
     border-radius: 4px;
     cursor: pointer;
-    transform: translateX(50%);
 }
 
 .form-container {
@@ -1070,6 +1067,21 @@ form label {
         margin-top: 40px;
         margin-left: 15px;
     }
+
+    .avatar-upload {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .avatar-upload img {
+        margin: 0;
+    }
+
+    .load-pic {
+        width: 190px;
+        margin: 10px 0px;
+    }
+
 
 }
 
