@@ -875,6 +875,10 @@ form label {
     color: #FFFFFF;
 }
 
+.page-link:focus {
+    box-shadow: none;
+}
+
 
 /* Estilos "nosotros" */
 .nosotros {
