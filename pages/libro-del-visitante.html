@@ -2,10 +2,12 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Libro del visitante</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Libro del visitante</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <link rel="stylesheet" href="../css/estilos.css">
   <link rel="icon" href="../img/logo2.png" type="image/x-icon" alt="Símbolo amarillo (logo), que representa un cactus">
 </head>
@@ -16,14 +18,19 @@
       <header class="row">
         <nav class="navbar navbar-dark bg-dark fixed-top">
           <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <a href="../index.html"><img class="logoImg" src="../img/logo.png" alt="Símbolo amarillo (logo), que representa un cactus"></a>
-            <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+            <a href="../index.html"><img class="logoImg" src="../img/logo.png"
+                alt="Símbolo amarillo (logo), que representa un cactus"></a>
+            <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+              aria-labelledby="offcanvasDarkNavbarLabel">
               <div class="offcanvas-header">
-                <a href="../index.html"><img class="logoImg" src="../img/logo.png" alt="Símbolo amarillo (logo), que representa un cactus"></a>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                <a href="../index.html"><img class="logoImg" src="../img/logo.png"
+                    alt="Símbolo amarillo (logo), que representa un cactus"></a>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                  aria-label="Close"></button>
               </div>
               <div class="offcanvas-body">
                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
@@ -50,102 +57,219 @@
         </nav>
       </header>
 
-    <main class="book">
+      <main class="book">
         <h1>| Libro del visitante</h1>
         <div class="visitor-book">
-            <h2>¿Visitaste la región de Arica y Parinacota? Déjanos tus impresiones y/o recomendaciones:</h2>
-            <p>(Los comentarios serán revisados antes de aparecer en la plataforma)</p>
-            <div class="comment-form">
-                <div class="avatar-upload">
-                    <img src="../img/profile.png" alt="Avatar de usuario genérica azul">
-                    <button class="load-pic">Subir imagen de perfil</button>
-                </div>
-                <div class="form-container">
-                    <form>
-                        <label for="nombreVisit">Nombre y apellidos:</label>
-                        <input id="nombreVisit" type="text" placeholder="p.ej. Juan Perez González">
-                        <label for="lugaresVisit">Lugares visitados:</label>
-                        <textarea id="lugaresVisit" placeholder="p.ej. Morro, Isla el alacrán, etc... (max. 50 caracteres)"></textarea>
-                        <label for="descripcionComent">Descripción:</label>
-                        <textarea id="descripcionComent" placeholder="Describa sus experiencias. (max. 255 caracteres)"></textarea>
-                        <div class="form-actions">
-                            <button type="button" class="submit-google">Comentar con <img src="../img/google.png" alt="logotipo de google rojo"></button>
-                            <button type="button" class="submit-fb">Comentar con <img src="../img/facebook-b.png" alt="logotipo de facebook azul"></button>
-                        </div>
-                        <button type="submit" class="submit">Enviar</button>
-                    </form>
-                </div>
+          <h2>¿Visitaste la región de Arica y Parinacota? Déjanos tus impresiones y/o recomendaciones:</h2>
+          <p>(Los comentarios serán revisados antes de aparecer en la plataforma)</p>
+          <div class="comment-form">
+            <div class="avatar-upload">
+              <img src="../img/profile.png" alt="Avatar de usuario genérica azul">
+              <button class="load-pic">Subir imagen de perfil</button>
             </div>
+            <div class="form-container">
+              <form>
+                <label for="nombreVisit">Nombre y apellidos:</label>
+                <input id="nombreVisit" type="text" placeholder="p.ej. Juan Perez González">
+                <label for="lugaresVisit">Lugares visitados:</label>
+                <textarea id="lugaresVisit"
+                  placeholder="p.ej. Morro, Isla el alacrán, etc... (max. 50 caracteres)"></textarea>
+                <label for="descripcionComent">Descripción:</label>
+                <textarea id="descripcionComent"
+                  placeholder="Describa sus experiencias. (max. 255 caracteres)"></textarea>
+                <div class="form-actions">
+                  <button type="button" class="submit-google">Comentar con <img src="../img/google.png"
+                      alt="logotipo de google rojo"></button>
+                  <button type="button" class="submit-fb">Comentar con <img src="../img/facebook-b.png"
+                      alt="logotipo de facebook azul"></button>
+                </div>
+                <button type="submit" class="submit">Enviar</button>
+              </form>
+            </div>
+          </div>
         </div>
         <section id="coment-book" class="coment-book">
-            <button class="prev-book-btn">❮</button>
-            <div class="slide-book">
+          <div class="container">
+            <div class="row comments-container">
+              <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
                 <blockquote class="blk-book">
-                    <div class="avatar-book">
-                        <img src="../img/coment/1.jpg" alt="Foto de perfil circular y flotante de quien comenta, con un marco blanco">
-                        <p class="fecha-book">Comentado el 15-05-2024</p>
-                    </div>
-                    <div class="comment-content">
-                        <p class="visitados-book">Lugares visitados: Ciudad de Arica, Lago Chungará, Putre</p>
-                        <p class="coment-user">"Arica es una joya escondida de Chile, con su clima cálido todo el año y
-                            sus hermosas playas. La mezcla de culturas y su rica historia, junto con su cercanía al desierto
-                            de Atacama, la hacen un destino fascinante para explorar. Feliz de haber estado allí!"</p>
-                    </div>
+                  <div class="avatar-book">
+                    <img src="../img/coment/1.jpg"
+                      alt="Foto de perfil circular y flotante de quien comenta, con un marco blanco">
+                    <p class="fecha-book">Comentado el 02-07-2024</p>
+                  </div>
+                  <div class="comment-content">
+                    <p class="visitados-book">Lugares visitados: Ciudad de Arica, Lago Chungará, Putre</p>
+                    <p class="coment-user">"Arica es una joya escondida de Chile, con su clima cálido todo el año y
+                      sus hermosas playas. La mezcla de culturas y su rica historia, junto con su cercanía al desierto
+                      de Atacama, la hacen un destino fascinante para explorar. Feliz de haber estado allí!"</p>
+                  </div>
                 </blockquote>
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
                 <blockquote class="blk-book">
-                    <div class="avatar-book">
-                        <img src="../img/coment/2.jpeg" alt="Foto de perfil circular y flotante de quien comenta, con un marco blanco">
-                        <p class="fecha-book">Comentado el 17-05-2024</p>
-                    </div>
-                    <div class="comment-content">
-                        <p class="visitados-book">Lugares visitados: Ciudad de Arica, Playas y valles</p>
-                        <p class="coment-user">"Las playas de Arica, son un paraíso para los amantes del sol y el surf.
-                            Con su permanente clima cálido, olas perfectas y arenas doradas, destacan playas como El Laucho y
-                            La Lisera. Además, la rica cultura y gastronomía complementan esta experiencia única"</p>
-                    </div>
+                  <div class="avatar-book">
+                    <img src="../img/coment/2.jpeg"
+                      alt="Foto de perfil circular y flotante de quien comenta, con un marco blanco">
+                    <p class="fecha-book">Comentado el 29-06-2024</p>
+                  </div>
+                  <div class="comment-content">
+                    <p class="visitados-book">Lugares visitados: Ciudad de Arica, Playas y valles</p>
+                    <p class="coment-user">"Las playas de Arica, son un paraíso para los amantes del sol y el surf.
+                      Con su permanente clima cálido, olas perfectas y arenas doradas, destacan playas como El Laucho y
+                      La Lisera. Además, la rica cultura y gastronomía complementan esta experiencia única"</p>
+                  </div>
                 </blockquote>
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
                 <blockquote class="blk-book">
-                    <div class="avatar-book">
-                        <img src="../img/coment/3.jpg" alt="Foto de perfil circular y flotante de quien comenta, con un marco blanco">
-                        <p class="fecha-book">Comentado el 19-05-2024</p>
-                    </div>
-                    <div class="comment-content">
-                        <p class="visitados-book">Lugares visitados: Ciudad de Arica, Azapa y morro</p>
-                        <p class="coment-user">"El valle de Azapa es famoso por su producción de aceitunas y
-                            arqueología, con geoglifos y momias de la cultura Chinchorro. El Morro, símbolo histórico, ofrece panorámicas
-                            de la ciudad y el mar, siendo un recordatorio de la Guerra del Pacífico."</p>
-                    </div>
+                  <div class="avatar-book">
+                    <img src="../img/coment/3.jpg"
+                      alt="Foto de perfil circular y flotante de quien comenta, con un marco blanco">
+                    <p class="fecha-book">Comentado el 17-06-2024</p>
+                  </div>
+                  <div class="comment-content">
+                    <p class="visitados-book">Lugares visitados: Ciudad de Arica, Azapa y morro</p>
+                    <p class="coment-user">"El valle de Azapa es famoso por su producción de aceitunas y
+                      arqueología, con geoglifos y momias de la cultura Chinchorro. El Morro, símbolo histórico, ofrece
+                      panorámicas
+                      de la ciudad y el mar, siendo un recordatorio de la Guerra del Pacífico."</p>
+                  </div>
                 </blockquote>
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                <blockquote class="blk-book">
+                  <div class="avatar-book">
+                    <img src="../img/coment/4.jpeg"
+                      alt="Foto de perfil circular y flotante de quien comenta, con un marco blanco">
+                    <p class="fecha-book">Comentado el 10-06-2024</p>
+                  </div>
+                  <div class="comment-content">
+                    <p class="visitados-book">Lugares visitados: Pute, Parque Lauca y Ciudad de Arica</p>
+                    <p class="coment-user">"En el altiplano, el Lauca me cautivó con lagunas turquesas, volcanes
+                      majestuosos y vicuñas libres. ¡Un paisaje de otro mundo!, en Putre, saboreé gastronomía
+                      aymara y me conecté con su cultura. Finalmente en la costa, lo mejor fueron las playas,
+                      mariscos frescos y el Morro histórico. ¡Un norte vibrante!"</p>
+                  </div>
+                </blockquote>
+              </div>
+
+              <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                <blockquote class="blk-book">
+                  <div class="avatar-book">
+                    <img src="../img/coment/5.jpg"
+                      alt="Foto de perfil circular y flotante de quien comenta, con un marco blanco">
+                    <p class="fecha-book">Comentado el 08-06-2024</p>
+                  </div>
+                  <div class="comment-content">
+                    <p class="visitados-book">Lugares visitados: Azapa, Museo Arqueológico de San Miguel y Lluta</p>
+                    <p class="coment-user">"Mi viaje a Arica y Parinacota estuvo marcado por la cultura y 
+                      la naturaleza. En el Valle de Azapa, recorrí la Ruta de las Olivas en bicicleta, 
+                      disfrutando de los paisajes y el aire puro. Luego, me adentré en el Valle de Lluta, 
+                      un oasis verde con un sitio arqueológico lleno de petroglifos. Finalmente, visité el 
+                      Museo Arqueológico San Miguel de Azapa, donde quedé impactado por las Momias Chinchorro y 
+                      su legado ancestral."</p>
+                  </div>
+                </blockquote>
+              </div>
+
+              <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                <blockquote class="blk-book">
+                  <div class="avatar-book">
+                    <img src="../img/coment/6.jpg"
+                      alt="Foto de perfil circular y flotante de quien comenta, con un marco blanco">
+                    <p class="fecha-book">Comentado el 19-05-2024</p>
+                  </div>
+                  <div class="comment-content">
+                    <p class="visitados-book">Lugares visitados: El Laucho, Morro y Ciudad de Arica</p>
+                    <p class="coment-user">"Mi aventura en Arica se centró en la costa y el icónico Morro. 
+                      Disfruté de las cálidas aguas y el sol en la Playa El Laucho, donde practiqué surf y 
+                      me relajé en la arena. Luego, me dirigí al Morro de Arica, donde subí a la cima para 
+                      contemplar las vistas panorámicas de la ciudad y el mar. También visité el Museo del 
+                      Morro y aprendí sobre la rica historia de la región. ¡Un viaje lleno de actividades 
+                      para todos los gustos!"</p>
+                  </div>
+                </blockquote>
+              </div>
+
+              <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                <blockquote class="blk-book">
+                  <div class="avatar-book">
+                    <img src="../img/coment/7.jpg"
+                      alt="Foto de perfil circular y flotante de quien comenta, con un marco blanco">
+                    <p class="fecha-book">Comentado el 17-05-2024</p>
+                  </div>
+                  <div class="comment-content">
+                    <p class="visitados-book">Lugares visitados: Putre, lago Chungará y Salinas de Surire</p>
+                    <p class="coment-user">"Mi viaje al altiplano fue una experiencia 
+                      inolvidable. Comencé en Putre, un pueblo pintoresco donde me conecté con la cultura 
+                      aymara y degusté su deliciosa gastronomía. Luego, me aventuré al Parque Nacional Lauca, 
+                      donde quedé maravillado con el lago Chungará, las vicuñas corriendo libres y la grandiosa 
+                      Reserva Nacional Las Vicuñas. Finalmente, visité las Salinas de Surire, un desierto de sal 
+                      de colores vibrantes que me dejó sin aliento."</p>
+                  </div>
+                </blockquote>
+              </div>
+
+              <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                <blockquote class="blk-book">
+                  <div class="avatar-book">
+                    <img src="../img/coment/8.jpg"
+                      alt="Foto de perfil circular y flotante de quien comenta, con un marco blanco">
+                    <p class="fecha-book">Comentado el 15-05-2024</p>
+                  </div>
+                  <div class="comment-content">
+                    <p class="visitados-book">Lugares visitados: Iglesias del Interior</p>
+                    <p class="coment-user">"Mi viaje tuvo un enfoque en la fe y la arquitectura 
+                      colonial. Recorrí la Ruta de las Iglesias Andinas, un camino que me llevó a conocer pueblos 
+                      encantadores y templos históricos. En Poconchile, me cautivó la iglesia de San Jerónimo, 
+                      con su estilo colonial y sus retablos tallados. En General Lagos, admiré la iglesia de Pucollo, 
+                      con su construcción en piedra y frescos antiguos. Finalmente, en Codpa, me conmovió la iglesia de 
+                      San Martin de Tours y su significado cultural para la comunidad."</p>
+                  </div>
+                </blockquote>
+              </div>
+
             </div>
-            <button class="next-book-btn">❯</button>
-        </section>
-
-    </main>
-
-    <footer>
-        <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-md-4">
-                    <p>DescubreAyP Organización sin fines de lucro <br> Fono contacto: (+56 9) 87654321 <br> E-mail: descubreayp@correo.cl <br> Dirección: Calle falsa #123 Arica.</p>
-                </div>
-                <div class="col-lg-4 col-md-4">
-                    <div class="social-media">
-                      <a href="#"><img src="../img/facebook.png" alt="logo de Facebook blanco"></a>
-                      <a href="#"><img src="../img/instagram.png" alt="logo Instagram blanco"></a>
-                      <a href="#"><img src="../img/x.png" alt="logo de X blanco"></a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4">
-                    <p class="copyright">&copy; 2024 DescubreAyP | Todos los derechos reservados | Desarrollado por Abdiel Villar</p>
-                </div>
+              <div class="col-12">
+                <nav aria-label="Page navigation">
+                  <ul class="pagination justify-content-center">
+                  </ul>
+                </nav>
+              </div>
             </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 col-md-4">
+              <p>DescubreAyP Organización sin fines de lucro <br> Fono contacto: (+56 9) 87654321 <br> E-mail:
+                descubreayp@correo.cl <br> Dirección: Calle falsa #123 Arica.</p>
+            </div>
+            <div class="col-lg-4 col-md-4">
+              <div class="social-media">
+                <a href="#"><img src="../img/facebook.png" alt="logo de Facebook blanco"></a>
+                <a href="#"><img src="../img/instagram.png" alt="logo Instagram blanco"></a>
+                <a href="#"><img src="../img/x.png" alt="logo de X blanco"></a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4">
+              <p class="copyright">&copy; 2024 DescubreAyP | Todos los derechos reservados | Desarrollado por Abdiel
+                Villar</p>
+            </div>
+          </div>
         </div>
-    </footer>
+      </footer>
     </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-    </script>
-    <script src="../js/index.js"></script>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+  </script>
+  <script src="../js/libro-del-visitante.js"></script>
 </body>
 
 </html>

@@ -749,7 +749,6 @@ main.historia {
 
 .form-container {
     max-width: 500px;
-    width: 100%;
 }
 
 .form-container form {
@@ -784,11 +783,10 @@ form label {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px 20px;
+    padding: 10px 10px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    width: 48%;
     font-weight: bold;
 }
 
@@ -803,12 +801,14 @@ form label {
     background-color: #ffffff;
     color: #333333;
     border: 1px solid #fa2500;
+    margin-right: 5px;
 }
 
 .submit-fb {
     background-color: #ffffff;
     color: #333333;
     border: 1px solid #0043fa;
+    margin-left: 5px;
 }
 
 .submit {
@@ -819,58 +819,18 @@ form label {
 }
 
 .coment-book {
-    position: relative;
-    text-align: center;
     background-color: #494949;
     color: #FFFFFF;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    overflow: hidden;
-}
-
-.prev-book-btn,
-.next-book-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    font-size: 2em;
-    color: #FFFFFF;
-    cursor: pointer;
-    z-index: 1;
-}
-
-.prev-book-btn {
-    left: 10px;
-}
-
-.next-book-btn {
-    right: 10px;
-}
-
-.slide-book {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-    flex-shrink: 0;
-    justify-content: space-evenly;
+    padding: 20px 0;
+    border-radius: 0 0 8px 8px;
 }
 
 .blk-book {
-    max-width: 450px;
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-top: 20px;
+    padding: 20px;
 }
 
 .avatar-book {
@@ -907,6 +867,7 @@ form label {
     font-size: 13px;
     color: #e6eff7;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 .coment-user {
@@ -1068,6 +1029,18 @@ form label {
         margin-left: 15px;
     }
 
+    .book {
+        padding: 20px 0px;
+    }
+
+    .coment-book, .visitor-book {
+        border-radius: 0px;
+    }
+
+    .form-container {
+        width: 100%;
+    }
+
     .avatar-upload {
         display: flex;
         flex-direction: column;
@@ -1082,6 +1055,20 @@ form label {
         margin: 10px 0px;
     }
 
+    .submit-google, .submit-fb {
+        font-size: 0.8rem;
+        padding: 5px;
+        width: 90%;
+    }
+
+    .submit-google img, .submit-fb img {
+        padding: 0px;
+        margin-left: 4px;
+    }
+
+    .coment-user {
+        text-align: justify;
+    }
 
 }
 
