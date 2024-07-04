@@ -887,21 +887,6 @@ form label {
     align-items: center;
 }
 
-#nosotros-text {
-    background-color: rgba(240, 248, 255, 0.8);
-    padding: 15px 15px;
-}
-
-#nosotros-text h2 {
-    color: #1C4A70;
-    font-size: x-large;
-    margin: 25px 0px 10px 0px;
-}
-
-#nosotros-text p {
-    margin-bottom: 25px;
-}
-
 .nosotros-title {
     color: #1C4A70;
     margin: 25px 0 25px 25px;
@@ -922,10 +907,20 @@ form label {
     text-align: left;
 }
 
-.video-nosotros iframe {
+.video-nosotros h2 {
+    margin-top: 50px;
+}
+
+.embed-responsive-16by9 {
     margin-top: 30px;
-    max-width: 640px;
-    max-height: 480px;
+    margin-bottom: 50px;
+    max-width: 100%;
+}
+
+.embed-responsive-16by9 iframe {
+    width: 80%;
+    max-height: auto;
+    height: 100%;
 }
 
 
@@ -1072,6 +1067,11 @@ form label {
 
     .coment-user {
         text-align: justify;
+    }
+
+    .about-us {
+        margin: 0px;
+        width: 100%;
     }
 
 }
