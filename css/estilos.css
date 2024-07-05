@@ -179,9 +179,14 @@ main h1 {
     background: none;
     border: none;
     font-size: 2em;
-    color: #FFFFFF;
+    color: #b9b9b9;
     cursor: pointer;
     z-index: 1;
+}
+
+.prev-coment-btn:hover,
+.next-coment-btn:hover {
+    color: #FFFFFF;
 }
 
 .prev-coment-btn {
@@ -903,6 +908,11 @@ form label {
     text-align: center;
 }
 
+.accordion {
+    --bs-accordion-btn-focus-box-shadow: none;
+    --bs-accordion-active-bg: rgba(240, 248, 255, 1);
+}
+
 .about-us ul {
     text-align: left;
 }
@@ -1074,6 +1084,11 @@ form label {
         width: 100%;
     }
 
+    .accordion {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
     .embed-responsive-16by9 {
         padding-left: 0px;
         padding-right: 0px;
@@ -1111,7 +1126,7 @@ form label {
     }
 
     .slider {
-        margin-top: 50px;
+        margin-top: 20px;
         padding: 0;
         width: 100%;
         overflow-x: hidden;
