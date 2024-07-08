@@ -1,0 +1,102 @@
+@import 'vars';
+@import 'mixin';
+
+.horizontal-sidebar-Hcontainer {
+    display: inline-flex !important;
+    position: fixed;
+    max-width: 1920px;
+    height: 160px;
+    width: 100%;
+    background-color: $sidebar-bg;
+    padding: 10px;
+    white-space: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    justify-content: space-around;
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.timeline {
+    position: fixed;
+    top: 100px;
+    width: 100%;
+    z-index: -1;
+    border: none;
+    border-top: 2px solid #ffdb0d;
+    box-shadow:         
+    0 -4px 6px rgba(252, 253, 162, 0.9),
+    0 4px 6px rgba(252, 253, 162, 0.9);
+}
+
+#prevHistbutton,
+#nextHistbutton {
+    position: fixed;
+    top: 100px;
+    color: $button-color;
+    opacity: 0.5;
+    z-index: 1;
+    
+    &:hover {
+        color: $button-hover-color;
+        opacity: 0.9;
+    }
+}
+
+#prevHistbutton {
+    left: 10px;
+}
+
+#nextHistbutton {
+    right: 10px;
+}
+
+#prevHistbutton p, 
+#nextHistbutton p {
+    font-size: small;
+    font-weight: bolder;
+}
+
+#barraHist {
+    width: 1920px;
+    width: 100%;
+    margin-top: 125px;
+    margin-left: 0;
+}
+
+#colHist {
+    height: 60px;
+    width: 100%;
+}
+
+.horizontal-sidebar-Hitem {
+    display: inline-block;
+    margin: 0 20px;
+    text-align: center;
+    z-index: 2;
+    
+    a {
+        text-decoration: none;
+        color: $sidebar-item-color;
+    }
+    
+    p {
+        margin: 0 5px;
+    }
+    
+    .bubble-div img {
+        width: 80px;
+        height: 80px;
+        border: 2px solid $highlight-color;
+        @include border-radius(50%);
+        margin: 15px 15px;
+    }
+    
+    &.active img {
+        border: 3px solid $active-color;
+        width: 90px;
+        height: 90px;
+    }
+}

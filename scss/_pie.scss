@@ -1,0 +1,40 @@
+@import 'vars';
+@import 'mixin';
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: $navbar-bg;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 10px 20px;
+    width: 100%;
+    @include box-sizing;
+
+    p {
+        text-align: center;
+        font-size: 0.8rem;
+        margin-bottom: 5px;
+        padding-left: 10px;
+    }
+
+    .social-media {
+        margin-top: 20px;
+        margin-bottom: 5px;
+        padding-left: 10px;
+        display: flex;
+        justify-content: center;
+
+        a img {
+            width: 24px;
+            height: 24px;
+            margin: 15px 5px;
+        }
+    }
+}
+
+.copyright {
+    margin-top: 35px;
+    text-align: center;
+}

@@ -1,0 +1,24 @@
+@import 'vars';
+
+.navbar-dark {
+  background: $navbar-bg;
+
+  .navbar-toggler {
+    margin-left: $navbar-toggler-dark-margin-left;
+  }
+}
+
+.navbar-toggler {
+  margin-left: $navbar-toggler-margin-left;
+}
+
+.offcanvas-body,
+.offcanvas-header {
+  background: $navbar-bg;
+}
+
+.logoImg {
+  height: $logo-height;
+  padding-top: $logo-padding-top;
+  margin-right: $logo-margin-right;
+}

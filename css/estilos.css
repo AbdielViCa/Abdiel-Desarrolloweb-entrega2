@@ -60,13 +60,13 @@ body {
     margin-right: 30px;
 }
 
-main {
+.mainIndex {
     padding: 0px;
     margin: 0;
     width: 100%;
 }
 
-main h1 {
+.mainIndex h1 {
     margin-top: 85px;
     text-align: center;
     font-size: xx-large;
@@ -1207,19 +1207,18 @@ form label {
 }
 
 @media (min-width: 768px) {
-    footer {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
+  footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-    footer p {
-        text-align: left;
-    }
+  footer p {
+    text-align: left;
+  }
 
-    footer .social-media {
-        margin-bottom: 0;
-        margin-left: 10px;
-    }
-
+  footer .social-media {
+    margin-bottom: 0;
+    margin-left: 10px;
+  }
 }
