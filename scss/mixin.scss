@@ -11,3 +11,16 @@
 @mixin border-radius($radius: 8px) {
     border-radius: $radius;
 }
+
+@mixin float-animation($name, $duration: 3s, $timing: ease-in-out, $iteration: infinite) {
+    @keyframes #{$name} {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+  
+    animation: #{$name} $duration $timing $iteration;
+  }

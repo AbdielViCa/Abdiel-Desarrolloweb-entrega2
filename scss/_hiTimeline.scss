@@ -93,8 +93,13 @@
     }
     
     &.active img {
+        @include float-animation(flotar);
         border: 3px solid $active-color;
         width: 90px;
         height: 90px;
+    }
+
+    &.active p {
+        @include float-animation(flotar);
     }
 }

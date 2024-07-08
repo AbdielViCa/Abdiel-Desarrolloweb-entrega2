@@ -39,9 +39,14 @@
     margin-bottom: 10px;
 
     &.active img {
+        @include float-animation(flotar);
         border: 3px solid $active-color;
         width: 100px;
         height: 100px;
+    }
+
+    &.active p {
+        @include float-animation(flotar);
     }
 
     a {
@@ -114,6 +119,17 @@
         border: 2px solid $highlight-color;
         @include border-radius(50%);
         margin: 15px 15px;
+    }
+
+    &.active img {
+        @include float-animation(flotar);
+        border: 3px solid $active-color;
+        width: 100px;
+        height: 100px;
+    }
+
+    &.active p {
+        @include float-animation(flotar);
     }
 }
 
