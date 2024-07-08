@@ -1,7 +1,24 @@
 @import 'vars';
 @import 'mixin';
 
-@media (max-width: 1920px) {
+$media-queries: (
+    "mxw-1920": "(max-width: 1920px)",
+    "mnw-992": "(min-width: 992px)",
+    "mxw-991": "(max-width: 991px)",
+    "mxw-767": "(max-width: 767px)",
+    "mxw-768": "(max-width: 768px)",
+    "mnw-768": "(min-width: 768px)"
+);
+
+
+
+@mixin responde($query) {
+    @media #{map-get($media-queries, $query)} {
+        @content;
+    }
+}
+
+@include responde("mxw-1920") {
     .container {
         padding: 0;
         max-width: 1920px;
@@ -9,73 +26,73 @@
 }
 
 /* Estilos para sidebar */
-@media (min-width: 993px) {
-    .sidebar-container {
-        display: flex;
-    }
-
+@include responde("mnw-992") {
     #barraLugHorizontal {
-        display: none !important;
+        display: none;
     }
 }
 
 /* Estilos sidebar y otros pantallas medianas y pequeñas */
-@media (max-width: 992px) {
-    .sidebar-container {
-        display: none !important;
-    }
-
-    .horizontal-sidebar-container {
-        display: inline-flex !important;
-        position: fixed;
-    }
-
+@include responde("mxw-991") {
     .text-container,
     .details,
     .location {
         margin: 0;
-        border-radius: 0px;
+        @include border-radius(0px);
     }
 
     .content-historia {
         margin: 0;
-        border-radius: 0px;
+        @include border-radius(0px);
         padding: 0;
         margin-top: 5px;
     }
 
     .historia-item {
         margin: 0;
-        border-radius: 0px;
+        @include border-radius(0px);
         padding: 0;
         margin-top: 5px;
+
+        p {
+            padding: 20px;
+            text-align: justify;
+        }
     }
 
     .image-containerHist {
         flex-direction: column;
         align-items: center;
-    }
 
-    .image-containerHist img {
-        margin: 0px;
-        padding: 0px;
-        border-radius: 0px;
-        width: 100%;
-        height: auto;
-    }
+        img {
+            margin: 0;
+            padding: 0;
+            @include border-radius(0px);
+            width: 100%;
+            height: auto;
+        }
 
-    .image-containerHist h2 {
-        margin-top: 25px;
-    }
-
-    .historia-item p {
-        padding: 20px;
-        text-align: justify;
+        h2 {
+            margin-top: 25px;
+        }
     }
 
     .text-container {
         padding: 0;
         margin-top: 5px;
+
+        img {
+            margin: 0;
+            padding: 0;
+            @include border-radius(0px);
+            width: 100%;
+            height: auto;
+        }
+
+        p {
+            padding: 20px;
+            text-align: justify;
+        }
     }
 
     .details,
@@ -83,21 +100,8 @@
         margin-bottom: 18px;
     }
 
-    .text-container img {
-        margin: 0px;
-        padding: 0px;
-        border-radius: 0px;
-        width: 100%;
-        height: auto;
-    }
-
-    .text-container p {
-        padding: 20px;
-        text-align: justify;
-    }
-
     .horizontal-sidebar-item.active img {
-        border: 3px solid #993bd8;
+        border: 3px solid $active-color;
         width: 90px;
         height: 90px;
     }
@@ -108,12 +112,12 @@
     }
 
     .book {
-        padding: 20px 0px;
+        padding: 20px 0;
     }
 
     .coment-book,
     .visitor-book {
-        border-radius: 0px;
+        @include border-radius(0px);
     }
 
     .form-container {
@@ -123,15 +127,15 @@
     .avatar-upload {
         display: flex;
         flex-direction: column;
-    }
 
-    .avatar-upload img {
-        margin: 0;
+        img {
+            margin: 0;
+        }
     }
 
     .load-pic {
         width: 190px;
-        margin: 10px 0px;
+        margin: 10px 0;
     }
 
     .submit-google,
@@ -139,12 +143,11 @@
         font-size: 0.8rem;
         padding: 5px;
         width: 90%;
-    }
 
-    .submit-google img,
-    .submit-fb img {
-        padding: 0px;
-        margin-left: 4px;
+        img {
+            padding: 0;
+            margin-left: 4px;
+        }
     }
 
     .coment-user {
@@ -152,8 +155,8 @@
     }
 
     .about-us {
-        margin: 0px;
-        padding: 0px;
+        margin: 0;
+        padding: 0;
         width: 100%;
     }
 
@@ -163,37 +166,37 @@
     }
 
     .embed-responsive-16by9 {
-        padding-left: 0px;
-        padding-right: 0px;
-    }
+        padding-left: 0;
+        padding-right: 0;
 
-    .embed-responsive-16by9 iframe {
-        width: 100%;
-        height: auto;
+        iframe {
+            width: 100%;
+            height: auto;
+        }
     }
 }
 
 /* Estilos Index.html incluye header y footer pantallas pequeñas */
-@media (max-width: 767px) {
+@include responde("mxw-767") {
     .content {
         padding: 20px 0;
-    }
 
-    .content article {
-        flex: 1 0 100%;
-        margin: 0;
+        article {
+            flex: 1 0 100%;
+            margin: 0;
+        }
     }
 
     .main-art {
         padding: 0;
-        border-radius: 0;
-    }
+        @include border-radius(0);
 
-    .main-art img {
-        width: 100%;
-        max-height: 400px;
-        object-fit: cover;
-        border-radius: 0;
+        img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            @include border-radius(0);
+        }
     }
 
     .slider {
@@ -214,7 +217,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@include responde("mxw-768") {
     .logo {
         order: 2;
         padding-right: 10%;
@@ -225,9 +228,11 @@
         display: block;
     }
 
-    .slider h1 {
-        font-size: 1.1em;
-        padding: 0.5em 1em;
+    .slider {
+        h1 {
+            font-size: 1.1em;
+            padding: 0.5em 1em;
+        }
     }
 
     .prev-coment-btn,
@@ -246,22 +251,10 @@
     .avatar {
         position: static;
         margin: 0 auto 5px;
-    }
 
-    .avatar p {
-        font-size: 11px;
-    }
-
-    blockquote p,
-    .visitados,
-    .coment {
-        margin-left: 15px;
-        margin-right: 15px;
-        text-align: center;
-    }
-
-    .visitados {
-        margin-top: 0;
+        p {
+            font-size: 11px;
+        }
     }
 
     blockquote {
@@ -269,6 +262,18 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        p,
+        .visitados,
+        .coment {
+            margin-left: 15px;
+            margin-right: 15px;
+            text-align: center;
+        }
+
+        .visitados {
+            margin-top: 0;
+        }
     }
 
     .copyright {
@@ -276,7 +281,7 @@
     }
 }
 
-@media (min-width: 768px) {
+@include responde("mnw-768") {
     footer {
         flex-direction: row;
         justify-content: space-between;
