@@ -1,0 +1,161 @@
+@import 'vars';
+@import 'mixin';
+
+
+.sidebar-container {
+    width: 150px;
+    max-height: calc(100%);
+    min-height: 200px;
+    padding: 0;
+    background-color: $sidebar-bg;
+    display: flex;
+    flex-direction: column;
+    margin-top: 56px;
+    margin-left: 10px;
+    align-items: center;
+    align-content: center;
+
+    & ::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.sidebar-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.bubble-div img {
+    width: 85px;
+    height: 85px;
+    border: 2px solid $highlight-color;
+    @include border-radius(50%);
+}
+
+.sidebar-item {
+    text-align: center;
+    margin-bottom: 10px;
+
+    &.active img {
+        @include float-animation(flotar);
+        border: 3px solid $active-color;
+        width: 100px;
+        height: 100px;
+    }
+
+    &.active p {
+        @include float-animation(flotar);
+    }
+
+    a {
+        text-decoration: none;
+        color: $sidebar-item-color;
+    }
+
+    p {
+        margin: 0 5px 5px;
+    }
+}
+
+.prev-place-btn, .next-place-btn {
+    background: none;
+    border: none;
+    color: $button-color;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+
+    &:hover {
+        color: $button-hover-color;
+    }
+}
+
+#barraLugHorizontal {
+    width: 100%;
+    margin-top: 125px;
+    margin-left: 0;
+}
+
+#colLugHorizontal {
+    height: 60px;
+    width: 100%;
+}
+
+.horizontal-sidebar-container {
+    max-width: 1920px;
+    height: 160px;
+    width: 100%;
+    background-color: $sidebar-bg;
+    padding: 10px;
+    white-space: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    justify-content: space-between;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.horizontal-sidebar-item {
+    display: inline-block;
+    margin: 0 20px;
+    text-align: center;
+
+    a {
+        text-decoration: none;
+        color: $sidebar-item-color;
+    }
+
+    p {
+        margin: 0 5px;
+    }
+
+    .bubble-div img {
+        width: 80px;
+        height: 80px;
+        border: 2px solid $highlight-color;
+        @include border-radius(50%);
+        margin: 15px 15px;
+    }
+
+    &.active img {
+        @include float-animation(flotar);
+        border: 3px solid $active-color;
+        width: 100px;
+        height: 100px;
+    }
+
+    &.active p {
+        @include float-animation(flotar);
+    }
+}
+
+.horizontal-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#prevHbutton,
+#nextHbutton {
+    position: fixed;
+    top: 100px;
+    color: $button-color;
+    z-index: 1;
+
+    &:hover {
+        color: $button-hover-color;
+    }
+}
+
+#prevHbutton {
+    left: 10px;
+}
+
+#nextHbutton {
+    right: 10px;
+}

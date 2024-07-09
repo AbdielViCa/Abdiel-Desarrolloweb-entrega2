@@ -1,0 +1,299 @@
+@import 'vars';
+@import 'mixin';
+
+$media-queries: (
+    "mxw-1920": "(max-width: 1920px)",
+    "mnw-992": "(min-width: 992px)",
+    "mxw-991": "(max-width: 991px)",
+    "mxw-767": "(max-width: 767px)",
+    "mxw-768": "(max-width: 768px)",
+    "mnw-768": "(min-width: 768px)"
+);
+
+
+
+@mixin responde($query) {
+    @media #{map-get($media-queries, $query)} {
+        @content;
+    }
+}
+
+@include responde("mxw-1920") {
+    .container {
+        padding: 0;
+        max-width: 1920px;
+    }
+}
+
+/* Estilos para sidebar */
+@include responde("mnw-992") {
+    #barraLugHorizontal {
+        display: none;
+    }
+}
+
+/* Estilos sidebar y otros pantallas medianas y pequeñas */
+@include responde("mxw-991") {
+    .text-container,
+    .details,
+    .location {
+        margin: 0;
+        @include border-radius(0px);
+    }
+
+    .content-historia {
+        margin: 0;
+        @include border-radius(0px);
+        padding: 0;
+        margin-top: 5px;
+    }
+
+    .historia-item {
+        margin: 0;
+        @include border-radius(0px);
+        padding: 0;
+        margin-top: 5px;
+
+        p {
+            padding: 20px;
+            text-align: justify;
+        }
+    }
+
+    .image-containerHist {
+        flex-direction: column;
+        align-items: center;
+
+        img {
+            margin: 0;
+            padding: 0;
+            @include border-radius(0px);
+            width: 100%;
+            height: auto;
+        }
+
+        h2 {
+            margin-top: 25px;
+        }
+    }
+
+    .text-container {
+        padding: 0;
+        margin-top: 5px;
+
+        img {
+            margin: 0;
+            padding: 0;
+            @include border-radius(0px);
+            width: 100%;
+            height: auto;
+        }
+
+        p {
+            padding: 20px;
+            text-align: justify;
+        }
+    }
+
+    .details,
+    .location {
+        margin-bottom: 18px;
+    }
+
+    .horizontal-sidebar-item.active img {
+        border: 3px solid $active-color;
+        width: 90px;
+        height: 90px;
+    }
+
+    #places-info h1 {
+        margin-top: 40px;
+        margin-left: 15px;
+    }
+
+    .book {
+        padding: 20px 0;
+    }
+
+    .coment-book,
+    .visitor-book {
+        @include border-radius(0px);
+    }
+
+    .form-container {
+        width: 100%;
+    }
+
+    .avatar-upload {
+        display: flex;
+        flex-direction: column;
+
+        img {
+            margin: 0;
+        }
+    }
+
+    .load-pic {
+        width: 190px;
+        margin: 10px 0;
+    }
+
+    .submit-google,
+    .submit-fb {
+        font-size: 0.8rem;
+        padding: 5px;
+        width: 90%;
+
+        img {
+            padding: 0;
+            margin-left: 4px;
+        }
+    }
+
+    .coment-user {
+        text-align: justify;
+    }
+
+    .about-us {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .accordion {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .embed-responsive-16by9 {
+        padding-left: 0;
+        padding-right: 0;
+
+        iframe {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+/* Estilos Index.html incluye header y footer pantallas pequeñas */
+@include responde("mxw-767") {
+    .content {
+        padding: 20px 0;
+
+        article {
+            flex: 1 0 100%;
+            margin: 0;
+        }
+    }
+
+    .main-art {
+        padding: 0;
+        @include border-radius(0);
+
+        img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            @include border-radius(0);
+        }
+    }
+
+    .slider {
+        margin-top: 20px;
+        padding: 0;
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    #sliderPrincipal {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .slide {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@include responde("mxw-768") {
+    .logo {
+        order: 2;
+        padding-right: 10%;
+    }
+
+    .menu-btn {
+        order: 1;
+        display: block;
+    }
+
+    .slider {
+        h1 {
+            font-size: 1.1em;
+            padding: 0.5em 1em;
+        }
+    }
+
+    .prev-coment-btn,
+    .next-coment-btn {
+        font-size: 1.5em;
+    }
+
+    .coments {
+        height: auto;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .avatar {
+        position: static;
+        margin: 0 auto 5px;
+
+        p {
+            font-size: 11px;
+        }
+    }
+
+    blockquote {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        p,
+        .visitados,
+        .coment {
+            margin-left: 15px;
+            margin-right: 15px;
+            text-align: center;
+        }
+
+        .visitados {
+            margin-top: 0;
+        }
+    }
+
+    .copyright {
+        margin-top: 15px;
+    }
+}
+
+@include responde("mnw-768") {
+    footer {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        p {
+            text-align: left;
+        }
+
+        .social-media {
+            margin-bottom: 0;
+            margin-left: 10px;
+        }
+    }
+}

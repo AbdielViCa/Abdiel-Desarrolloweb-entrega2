@@ -1,0 +1,114 @@
+@import 'vars';
+@import 'mixin';
+
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.avatar-upload {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+
+    img {
+        object-fit: cover;
+        height: 130px;
+        width: 130px;
+        border-radius: 50%;
+        border: 3px solid #FFFFFF;
+        @include box-shadow;
+        margin: 15px 0px 5px 35%;
+    }
+}
+
+.load-pic {
+    margin-top: 10px;
+    margin-left: 20px;
+    padding: 5px 0px;
+    width: 360px;
+    border: 1px solid #1BB286;
+    color: #1BB286;
+    font-weight: bold;
+    @include border-radius(4px);
+    cursor: pointer;
+}
+
+.form-container {
+    max-width: 500px;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        label {
+            font-weight: bold;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            @include border-radius(4px);
+            @include box-sizing;
+        }
+
+        .form-actions {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+    }
+}
+
+.submit-google,
+.submit-fb,
+.submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 10px;
+    border: none;
+    @include border-radius(4px);
+    cursor: pointer;
+    font-weight: bold;
+
+    &.submit-google {
+        background-color: #ffffff;
+        color: #333333;
+        border: 1px solid #fa2500;
+        margin-right: 5px;
+
+        img {
+            height: 25px;
+            width: 25px;
+            margin-left: 10px;
+        }
+    }
+
+    &.submit-fb {
+        background-color: #ffffff;
+        color: #333333;
+        border: 1px solid #0043fa;
+        margin-left: 5px;
+
+        img {
+            height: 25px;
+            width: 25px;
+            margin-left: 10px;
+        }
+    }
+
+    &.submit {
+        background-color: #1BB286;
+        color: white;
+        width: 100%;
+        margin-top: 10px;
+    }
+}

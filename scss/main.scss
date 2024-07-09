@@ -1,0 +1,56 @@
+// Fuente principal
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+//Reset y otros globales
+@import 'vars';
+@import 'mixin';
+@import '_reset';
+
+// Header general
+@import '_cabeza';
+
+
+// index.html
+//Main
+@import '_inPrincipal';
+//Slider principal
+@import '_slider';
+//Articulos
+@import '_inArticulos';
+//Slider de Comentarios recientes
+@import '_inComent';
+
+
+// lugares.html
+//Contenido
+@import '_luContenido';
+//Sidebars
+@import '_luSidebars';
+
+
+// historia.html
+//Contenido
+@import '_hiContenido';
+//Timeline (sidebar)
+@import '_hiTimeline';
+
+
+// libro-del-visitante.html
+//Main
+@import '_liPrincipal';
+//Formulario
+@import '_liForm';
+//Libro del visitante
+@import '_liBook';
+
+
+// nosotros.html
+//Contenido
+@import '_noPrincipal';
+
+
+// Footer general
+@import '_pie';
+
+// Media queries
+@import 'mquery';

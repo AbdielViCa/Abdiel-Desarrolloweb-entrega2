@@ -1,0 +1,16 @@
+@import 'vars';
+@import 'mixin';
+
+.book {
+    width: 100%;
+    padding: 20px;
+    @include box-sizing;
+    margin-top: 35px;
+    
+    h1 {
+        color: $text-color;
+        margin: 30px 0 25px 25px;
+        text-align: left;
+        font-size: xx-large;
+    }
+}

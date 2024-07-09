@@ -1,0 +1,17 @@
+.slider {
+    text-align: center;
+    padding: 0;
+    margin-bottom: 30px;
+    margin-top: 25px;
+    
+    #sliderPrincipal {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .slide {
+        position: relative;
+        display: flex;
+        aspect-ratio: 16 / 9;
+    }
+}

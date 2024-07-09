@@ -1,0 +1,51 @@
+@import 'vars';
+@import 'mixin';
+
+.nosotros {
+    margin-top: 45px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .nosotros-title {
+    color: $main-color;
+    margin: 25px 0 25px 25px;
+    text-align: left;
+    font-size: xx-large;
+    display: block;
+  }
+  
+  .about-us {
+    margin: auto;
+    width: 70%;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    
+    ul {
+      text-align: left;
+    }
+  }
+
+  .accordion {
+    --bs-accordion-btn-focus-box-shadow: none;
+    --bs-accordion-active-bg: rgba(240, 248, 255, 1);
+  }
+  
+  .video-nosotros {
+    h2 {
+      margin-top: 50px;
+    }
+  
+    .embed-responsive-16by9 {
+      margin-top: 30px;
+      margin-bottom: 50px;
+      max-width: 100%;
+      
+      iframe {
+        width: 80%;
+        height: 450px;
+      }
+    }
+  }
+  

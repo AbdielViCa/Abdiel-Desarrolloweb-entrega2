@@ -1,0 +1,81 @@
+@import 'vars';
+@import 'mixin';
+
+.visitor-book {
+    background-color: $bg-color;
+    padding: 20px;
+    @include border-radius;
+    text-align: center;
+
+    h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 14px;
+        color: #777;
+        margin-bottom: 20px;
+    }
+}
+
+.coment-book {
+    background-color: #494949;
+    color: #FFFFFF;
+    padding: 20px 0;
+    @include border-radius(0 0 8px 8px);
+}
+
+.blk-book {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+}
+
+.avatar-book {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+
+    p {
+        color: #c3dbf1;
+        font-size: 12px;
+        padding: 0;
+        text-align: center;
+        margin-top: 5px;
+    }
+
+    img {
+        object-fit: cover;
+        height: 120px;
+        width: 120px;
+        border-radius: 50%;
+        border: 3px solid #FFFFFF;
+        @include box-shadow;
+    }
+}
+
+.comment-content {
+    text-align: left;
+    width: 100%;
+    padding: 10px;
+}
+
+.visitados-book {
+    font-size: 13px;
+    color: #e6eff7;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.coment-user {
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.page-link:focus {
+    box-shadow: none;
+}
