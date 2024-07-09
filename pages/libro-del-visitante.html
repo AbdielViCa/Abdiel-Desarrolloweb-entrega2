@@ -1,36 +1,29 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Libro del visitante</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <link rel="stylesheet" href="../css/estilos.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="../css/main.css">
   <link rel="icon" href="../img/logo2.png" type="image/x-icon" alt="Símbolo amarillo (logo), que representa un cactus">
 </head>
-
 <body>
   <div class="container-fluid">
     <div class="container">
       <header class="row">
         <nav class="navbar navbar-dark bg-dark fixed-top">
           <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-              data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <a href="../index.html"><img class="logoImg" src="../img/logo.png"
-                alt="Símbolo amarillo (logo), que representa un cactus"></a>
-            <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
-              aria-labelledby="offcanvasDarkNavbarLabel">
+            <a href="../index.html"><img class="logoImg" src="../img/logo.png" alt="Símbolo amarillo (logo), que representa un cactus"></a>
+            <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
               <div class="offcanvas-header">
-                <a href="../index.html"><img class="logoImg" src="../img/logo.png"
-                    alt="Símbolo amarillo (logo), que representa un cactus"></a>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-                  aria-label="Close"></button>
+                <a href="../index.html"><img class="logoImg" src="../img/logo.png" alt="Símbolo amarillo (logo), que representa un cactus"></a>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
               </div>
               <div class="offcanvas-body">
                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
@@ -44,8 +37,7 @@
                     <a class="nav-link" aria-current="page" href="./historia.html">Historia</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="./libro-del-visitante.html">Libro del
-                      Visitante</a>
+                    <a class="nav-link active" aria-current="page" href="./libro-del-visitante.html">Libro del Visitante</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="./nosotros.html">Nosotros</a>
@@ -56,7 +48,6 @@
           </div>
         </nav>
       </header>
-
       <main class="book">
         <h1>| Libro del visitante</h1>
         <div class="visitor-book">
@@ -72,16 +63,12 @@
                 <label for="nombreVisit">Nombre y apellidos:</label>
                 <input id="nombreVisit" type="text" placeholder="p.ej. Juan Perez González">
                 <label for="lugaresVisit">Lugares visitados:</label>
-                <textarea id="lugaresVisit"
-                  placeholder="p.ej. Morro, Isla el alacrán, etc... (max. 50 caracteres)"></textarea>
+                <textarea id="lugaresVisit" placeholder="p.ej. Morro, Isla el alacrán, etc... (max. 50 caracteres)"></textarea>
                 <label for="descripcionComent">Descripción:</label>
-                <textarea id="descripcionComent"
-                  placeholder="Describa sus experiencias. (max. 255 caracteres)"></textarea>
+                <textarea id="descripcionComent" placeholder="Describa sus experiencias. (max. 255 caracteres)"></textarea>
                 <div class="form-actions">
-                  <button type="button" class="submit-google">Comentar con <img src="../img/google.png"
-                      alt="logotipo de google rojo"></button>
-                  <button type="button" class="submit-fb">Comentar con <img src="../img/facebook-b.png"
-                      alt="logotipo de facebook azul"></button>
+                  <button type="button" class="submit-google">Comentar con <img src="../img/google.png" alt="logotipo de google rojo"></button>
+                  <button type="button" class="submit-fb">Comentar con <img src="../img/facebook-b.png" alt="logotipo de facebook azul"></button>
                 </div>
                 <button type="submit" class="submit">Enviar</button>
               </form>
@@ -91,11 +78,10 @@
         <section id="coment-book" class="coment-book">
           <div class="container">
             <div class="row comments-container">
-              <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+              <div class="col-lg-3 col-md-6 col-sm-12 mb-4" data-aos="fade-right">
                 <blockquote class="blk-book">
                   <div class="avatar-book">
-                    <img src="../img/coment/1.jpg"
-                      alt="Foto de perfil circular y flotante de quien comenta, con un marco blanco">
+                    <img src="../img/coment/1.jpg" alt="Foto de perfil circular y flotante de quien comenta, con un marco blanco">
                     <p class="fecha-book">Comentado el 02-07-2024</p>
                   </div>
                   <div class="comment-content">
@@ -106,11 +92,10 @@
                   </div>
                 </blockquote>
               </div>
-              <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+              <div class="col-lg-3 col-md-6 col-sm-12 mb-4" data-aos="fade-left">
                 <blockquote class="blk-book">
                   <div class="avatar-book">
-                    <img src="../img/coment/2.jpeg"
-                      alt="Foto de perfil circular y flotante de quien comenta, con un marco blanco">
+                    <img src="../img/coment/2.jpeg" alt="Foto de perfil circular y flotante de quien comenta, con un marco blanco">
                     <p class="fecha-book">Comentado el 29-06-2024</p>
                   </div>
                   <div class="comment-content">
@@ -121,11 +106,10 @@
                   </div>
                 </blockquote>
               </div>
-              <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+              <div class="col-lg-3 col-md-6 col-sm-12 mb-4" data-aos="fade-right">
                 <blockquote class="blk-book">
                   <div class="avatar-book">
-                    <img src="../img/coment/3.jpg"
-                      alt="Foto de perfil circular y flotante de quien comenta, con un marco blanco">
+                    <img src="../img/coment/3.jpg" alt="Foto de perfil circular y flotante de quien comenta, con un marco blanco">
                     <p class="fecha-book">Comentado el 17-06-2024</p>
                   </div>
                   <div class="comment-content">
@@ -137,11 +121,10 @@
                   </div>
                 </blockquote>
               </div>
-              <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+              <div class="col-lg-3 col-md-6 col-sm-12 mb-4" data-aos="fade-left">
                 <blockquote class="blk-book">
                   <div class="avatar-book">
-                    <img src="../img/coment/4.jpeg"
-                      alt="Foto de perfil circular y flotante de quien comenta, con un marco blanco">
+                    <img src="../img/coment/4.jpeg" alt="Foto de perfil circular y flotante de quien comenta, con un marco blanco">
                     <p class="fecha-book">Comentado el 10-06-2024</p>
                   </div>
                   <div class="comment-content">
@@ -153,83 +136,74 @@
                   </div>
                 </blockquote>
               </div>
-
-              <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+              <div class="col-lg-3 col-md-6 col-sm-12 mb-4" data-aos="fade-right">
                 <blockquote class="blk-book">
                   <div class="avatar-book">
-                    <img src="../img/coment/5.jpg"
-                      alt="Foto de perfil circular y flotante de quien comenta, con un marco blanco">
+                    <img src="../img/coment/5.jpg" alt="Foto de perfil circular y flotante de quien comenta, con un marco blanco">
                     <p class="fecha-book">Comentado el 08-06-2024</p>
                   </div>
                   <div class="comment-content">
                     <p class="visitados-book">Lugares visitados: Azapa, Museo Arqueológico de San Miguel y Lluta</p>
-                    <p class="coment-user">"Mi viaje estuvo marcado por la cultura y 
-                      la naturaleza. En Azapa, recorrí la Ruta de las Olivas en bicicleta, 
-                      disfrutando de paisajes y aire puro. Luego, me adentré en Lluta, 
-                      un oasis verde con un sitio arqueológico lleno de petroglifos. Finalmente, el 
-                      Museo Arqueológico San Miguel, donde quedé impactado por las Momias Chinchorro y 
+                    <p class="coment-user">"Mi viaje estuvo marcado por la cultura y
+                      la naturaleza. En Azapa, recorrí la Ruta de las Olivas en bicicleta,
+                      disfrutando de paisajes y aire puro. Luego, me adentré en Lluta,
+                      un oasis verde con un sitio arqueológico lleno de petroglifos. Finalmente, el
+                      Museo Arqueológico San Miguel, donde quedé impactado por las Momias Chinchorro y
                       su legado ancestral."</p>
                   </div>
                 </blockquote>
               </div>
-
-              <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+              <div class="col-lg-3 col-md-6 col-sm-12 mb-4" data-aos="fade-left">
                 <blockquote class="blk-book">
                   <div class="avatar-book">
-                    <img src="../img/coment/6.jpg"
-                      alt="Foto de perfil circular y flotante de quien comenta, con un marco blanco">
+                    <img src="../img/coment/6.jpg" alt="Foto de perfil circular y flotante de quien comenta, con un marco blanco">
                     <p class="fecha-book">Comentado el 19-05-2024</p>
                   </div>
                   <div class="comment-content">
                     <p class="visitados-book">Lugares visitados: El Laucho, Morro y Ciudad de Arica</p>
-                    <p class="coment-user">"Mi aventura en Arica se centró en la costa y el icónico Morro. 
-                      Disfruté de las cálidas aguas y el sol en la Playa El Laucho, donde practiqué surf y 
-                      me relajé en la arena. Luego, me dirigí al Morro de Arica, donde subí a la cima para 
-                      contemplar las vistas panorámicas de la ciudad y el mar. También visité el Museo del 
-                      Morro y aprendí sobre la rica historia de la región. ¡Un viaje lleno de actividades 
+                    <p class="coment-user">"Mi aventura en Arica se centró en la costa y el icónico Morro.
+                      Disfruté de las cálidas aguas y el sol en la Playa El Laucho, donde practiqué surf y
+                      me relajé en la arena. Luego, me dirigí al Morro de Arica, donde subí a la cima para
+                      contemplar las vistas panorámicas de la ciudad y el mar. También visité el Museo del
+                      Morro y aprendí sobre la rica historia de la región. ¡Un viaje lleno de actividades
                       para todos los gustos!"</p>
                   </div>
                 </blockquote>
               </div>
-
-              <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+              <div class="col-lg-3 col-md-6 col-sm-12 mb-4" data-aos="fade-right">
                 <blockquote class="blk-book">
                   <div class="avatar-book">
-                    <img src="../img/coment/7.jpg"
-                      alt="Foto de perfil circular y flotante de quien comenta, con un marco blanco">
+                    <img src="../img/coment/7.jpg" alt="Foto de perfil circular y flotante de quien comenta, con un marco blanco">
                     <p class="fecha-book">Comentado el 17-05-2024</p>
                   </div>
                   <div class="comment-content">
                     <p class="visitados-book">Lugares visitados: Putre, lago Chungará y Salinas de Surire</p>
-                    <p class="coment-user">"Mi viaje al altiplano fue una experiencia 
-                      inolvidable. Putre, un pueblo pintoresco donde me conecté con la cultura 
-                      aymara y degusté su deliciosa gastronomía. Luego, el Parque Nacional Lauca, 
-                      donde quedé maravillado con el lago Chungará, las vicuñas corriendo y la 
-                      Reserva Nacional Las Vicuñas. Finalmente, las Salinas de Surire, un desierto de sal 
+                    <p class="coment-user">"Mi viaje al altiplano fue una experiencia
+                      inolvidable. Putre, un pueblo pintoresco donde me conecté con la cultura
+                      aymara y degusté su deliciosa gastronomía. Luego, el Parque Nacional Lauca,
+                      donde quedé maravillado con el lago Chungará, las vicuñas corriendo y la
+                      Reserva Nacional Las Vicuñas. Finalmente, las Salinas de Surire, un desierto de sal
                       de colores vibrantes que me dejó sin aliento."</p>
                   </div>
                 </blockquote>
               </div>
-
-              <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+              <div class="col-lg-3 col-md-6 col-sm-12 mb-4" data-aos="fade-left">
                 <blockquote class="blk-book">
                   <div class="avatar-book">
-                    <img src="../img/coment/8.jpg"
-                      alt="Foto de perfil circular y flotante de quien comenta, con un marco blanco">
+                    <img src="../img/coment/8.jpg" alt="Foto de perfil circular y flotante de quien comenta, con un marco blanco">
                     <p class="fecha-book">Comentado el 15-05-2024</p>
                   </div>
                   <div class="comment-content">
                     <p class="visitados-book">Lugares visitados: Iglesias del Interior</p>
-                    <p class="coment-user">"Mi viaje se marcó por la fe y la arquitectura 
-                      colonial. Recorrí la Ruta de las Iglesias Andinas, conociendo pueblos 
-                      encantadores y templos históricos. En Poconchile, la iglesia de San Jerónimo, 
-                      con su estilo colonial y sus retablos. En General Lagos, la iglesia de Pucollo, 
-                      construida en piedra y frescos antiguos. Finalmente, en Codpa, la iglesia de 
+                    <p class="coment-user">"Mi viaje se marcó por la fe y la arquitectura
+                      colonial. Recorrí la Ruta de las Iglesias Andinas, conociendo pueblos
+                      encantadores y templos históricos. En Poconchile, la iglesia de San Jerónimo,
+                      con su estilo colonial y sus retablos. En General Lagos, la iglesia de Pucollo,
+                      construida en piedra y frescos antiguos. Finalmente, en Codpa, la iglesia de
                       San Martin de Tours y su significado cultural para la comunidad."</p>
                   </div>
                 </blockquote>
               </div>
-
             </div>
             <div class="row">
               <div class="col-12">
@@ -242,7 +216,6 @@
           </div>
         </section>
       </main>
-
       <footer>
         <div class="container">
           <div class="row">
@@ -266,10 +239,12 @@
       </footer>
     </div>
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
   </script>
   <script src="../js/libro-del-visitante.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
-
 </html>
