@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW 2018 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="71.2251mm" height="71.339mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 7122.52 7133.91"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil1 {fill:url(#id0)}
+    .fil0 {fill:url(#id1)}
+   ]]>
+  </style>
+  <linearGradient id="id0" gradientUnits="userSpaceOnUse" x1="3553.66" y1="1433.03" x2="3568.85" y2="6296.87">
+   <stop offset="0" style="stop-opacity:1; stop-color:#EAF6FF"/>
+   <stop offset="0.690196" style="stop-opacity:1; stop-color:#CDEAFF"/>
+   <stop offset="1" style="stop-opacity:1; stop-color:#AFDDFF"/>
+  </linearGradient>
+  <linearGradient id="id1" gradientUnits="userSpaceOnUse" x1="3442.67" y1="66.83" x2="3560.72" y2="7133.93">
+   <stop offset="0" style="stop-opacity:1; stop-color:#00BFFF"/>
+   <stop offset="1" style="stop-opacity:1; stop-color:#5559FF"/>
+  </linearGradient>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_781281024">
+   <ellipse class="fil0" cx="3561.26" cy="3566.96" rx="3561.26" ry="3566.96"/>
+   <path class="fil1" d="M3569.51 1404.84c575.94,0 1042.83,458.83 1042.83,1024.8 0,441.76 -284.42,818.23 -683.14,962.2 829.74,176.99 1395.99,862.56 1499.41,1573.33 20.4,186.82 21.83,310.97 12.77,527.74 -284.5,484.85 -1093,741.99 -1872.53,803.95 -1004.97,-68.17 -1465.02,-305.17 -1861.92,-778.49 -35.27,-56.43 -35.27,-418.89 10.09,-606.46 163.11,-748.23 590.9,-1336.96 1500.11,-1517.5 -402.5,-142.02 -690.43,-520.33 -690.43,-964.77 0,-565.97 466.9,-1024.8 1042.81,-1024.8z"/>
+  </g>
+ </g>
+</svg>
