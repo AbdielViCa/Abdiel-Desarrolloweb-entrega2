@@ -1,5 +1,5 @@
 
-# TERCERA ENTREGA - PROYECTO WEB CODERHOUSE
+# ENTREGA FINAL - PROYECTO WEB CODERHOUSE
 
 Este proyecto trata acerca de un sitio web para una organización sin fines de lucro ficticia, cuyo fin es la promoción turística de la región de Arica y Parinacota en Chile.
 
