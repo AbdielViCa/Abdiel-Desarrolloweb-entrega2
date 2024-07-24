@@ -12,7 +12,7 @@ html, body {
 }
 
 body {
-  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.9)), url(../img/texture.png);
+  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.9)), url(../img/texture.webp);
   background-size: cover;
   background-attachment: fixed;
   font-family: "Space Grotesk", Arial, sans-serif;
