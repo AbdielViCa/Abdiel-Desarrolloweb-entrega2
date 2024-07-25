@@ -549,13 +549,13 @@ main.historia {
   position: fixed;
   top: 100px;
   color: #b9b9b9;
-  opacity: 0.5;
+  opacity: 0.7;
   z-index: 1;
 }
 #prevHistbutton:hover,
 #nextHistbutton:hover {
   color: #ffffff;
-  opacity: 0.9;
+  opacity: 1;
 }
 
 #prevHistbutton {
