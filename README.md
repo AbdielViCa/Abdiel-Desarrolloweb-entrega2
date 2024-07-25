@@ -34,7 +34,7 @@ Se aplican diversas prácticas que integran accesibilidad y optimización para m
 * Implementación de meta keywords diferenciada para cada página.
 * Implementación de meta opengraph diferenciado para cada página.
 
-##Actualización
+## Actualización
 
 Se implementan los siguientes cambios:
 * Se cambia el nombre del repositorio por "PF-Turismo-DescubreAyP".
