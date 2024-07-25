@@ -524,7 +524,7 @@ main.historia {
   height: 160px;
   width: 100%;
   background-color: #343a40;
-  padding: 10px 25px;
+  padding: 10px;
   white-space: nowrap;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
