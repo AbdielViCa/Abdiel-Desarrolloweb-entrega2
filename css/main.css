@@ -671,11 +671,17 @@ main.historia {
   margin-left: 20px;
   padding: 5px 0px;
   width: 360px;
-  border: 1px solid #1BB286;
-  color: #1BB286;
+  border: 1px solid #1C4A70;
+  color: #1C4A70;
   font-weight: bold;
   border-radius: 4px;
   cursor: pointer;
+}
+.load-pic:active {
+  border: none;
+  background-color: #3B7DD8;
+  color: #ffffff;
+  transition: ease-in-out;
 }
 
 .form-container {
@@ -749,10 +755,17 @@ main.historia {
 .submit-google.submit,
 .submit-fb.submit,
 .submit.submit {
-  background-color: #1BB286;
-  color: white;
+  background-color: #1C4A70;
+  color: #ffffff;
   width: 100%;
   margin-top: 10px;
+}
+.submit-google.submit:active,
+.submit-fb.submit:active,
+.submit.submit:active {
+  transition: ease-in-out;
+  background-color: #3B7DD8;
+  scale: 97%;
 }
 
 .visitor-book {

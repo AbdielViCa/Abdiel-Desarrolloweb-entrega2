@@ -30,11 +30,18 @@
     margin-left: 20px;
     padding: 5px 0px;
     width: 360px;
-    border: 1px solid #1BB286;
-    color: #1BB286;
+    border: 1px solid $text-color;
+    color: $text-color;
     font-weight: bold;
     @include border-radius(4px);
     cursor: pointer;
+
+    &:active {
+        border: none;
+        background-color: $highlight-color;
+        color: $buttonB-color;
+        transition:ease-in-out;
+    }
 }
 
 .form-container {
@@ -106,9 +113,15 @@
     }
 
     &.submit {
-        background-color: #1BB286;
-        color: white;
+        background-color: $text-color;
+        color: $buttonB-color;
         width: 100%;
         margin-top: 10px;
+
+        &:active {
+            transition:ease-in-out;
+            background-color: $highlight-color;
+            scale: 97%;
+        }
     }
 }
