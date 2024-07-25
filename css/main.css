@@ -680,6 +680,7 @@ main.historia {
 .load-pic:active {
   border: none;
   background-color: #3B7DD8;
+  border: 1px solid rgba(240, 248, 255, 0.8);
   color: #ffffff;
   transition: ease-in-out;
 }
