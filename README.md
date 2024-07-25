@@ -20,10 +20,33 @@ Para este sitio web, se utiliza HTML, bootstrap y Sass para crear una interfaz d
 Se utiliza Sass y JavaScript para integrar elementos interactivos y animaciones que nutren la experiencia de usuario, transformándola en un sitio mas atractivo y sencillo en su navegación. Estos elementos permiten, por ejemplo en el caso de las burbujas flotantes (ver sección "lugares" e "historia"), seleccionar y cambiar el contenido que se visualiza.
 
 Además posee un apartado específico en el que los usuarios finales de la página podrán integrar contenido al sitio a través de comentarios, (ver sección "libro del visitante").
+
+## SEO y Accesibilidad
+
+Se aplican diversas prácticas que integran accesibilidad y optimización para motores de búsqueda, entre las cuales podemos encontrar las siguientes:
+
+* Atributo "alt" aplicado a todos los elementos de la página.
+* Homologación en la relación de aspecto en imágenes.
+* Aplicación de imágenes miniatura homologadas en burbujas flotantes.
+* Utilización única de formatos SVG para los íconos de redes sociales y logo corporativo.
+* Utilización de formato webp para todas las imágenes e ilustraciones, exceptuando los iconos y logos corporativos.
+* Implementación de meta description diferenciada para cada página.
+* Implementación de meta keywords diferenciada para cada página.
+* Implementación de meta opengraph diferenciado para cada página.
+
+##Actualización
+
+Se implementan los siguientes cambios:
+* Se cambia el nombre del repositorio por "PF-Turismo-DescubreAyP".
+* Imagen de artículo en página "Inicio".
+* Cambios en colores de botones y animación en los mismos, los cuales corresponden al formulario de la página "libro del visitante".
+* Cambio en el video que se utiliza en la página "nosotros".
+* Se ordenan los import en los partials de SASS, quedando estos unicamente en main.
+
 ## AUTORES
 
 - [@AbdielViCa](https://github.com/AbdielViCa)
 
 
 ## REPOSITORIO
-* [REPO](https://github.com/AbdielViCa/Abdiel-Desarrolloweb-entrega2)
+* [REPO](https://github.com/AbdielViCa/PF-Turismo-DescubreAyP.git)
